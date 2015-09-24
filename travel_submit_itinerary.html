@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Submit an Itinerary </title>
+</head>
+<body>
+
+<h1>Submit an itinerary</h1>
+
+<div id="submit-form"> 
+<p id="contact-para">Complete the form below to submit your itinerary.</p>
+ <form action="http://formspree.io/yjamie.corley@cutoutcopy.com" method="POST" id="form1">
+  <p><label>Where did you go?<input type="text" name="where"/></label></p>
+  <p><label>When did you go?<input type="text" name="when"/></label></p>  <!-- Will change to a calendar plug-in -->
+ <p><label>What did you do?</label></p> 
+ 	<textarea name="tips" form="usrform" rows="5" cols="40"></textarea>
+  <p><label>How did you get there?<input type="text" name="how"/></label></p>
+
+ <p><label>Additional tips</label></p> 
+ 	<textarea name="tips" form="usrform" rows="5" cols="40"></textarea>
+  <p id="submit"><input type="submit" value="send"><p>
+  	<input type="hidden" name="_next" value="//site.io/thanks.html" />
+<!-- <p><button id="Submit" type="button" value="send" onclick="myFunction()">Submit</button></p>
+                <script>
+                function myFunction() {
+                    document.getElementById("Submit").innerHTML = "Thank you!";
+                }
+                </script>
+ -->
+</form>
+</div>
+
+
+
+</body>
+</html>
