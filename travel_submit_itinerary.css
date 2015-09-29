@@ -1,0 +1,32 @@
+* {
+	font-family: Lato;
+	font-weight: lighter;
+}
+
+div {
+	border: 1px solid black;
+}
+
+#hometitle, h1 {
+	display: inline-block;
+	width: 100%;
+}
+
+#landingHeader, h1 {
+	margin-top: 50px;
+	text-align: center;
+}
+
+#submitButton {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+}
+
+#button_header {
+	display: inline-flex;
+	float: right;
+}
+
+#form {
+	padding: 15px 15px 15px 15px;
+}

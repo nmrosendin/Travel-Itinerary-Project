@@ -2,13 +2,22 @@
 <html>
 <head>
 <title>Submit an Itinerary </title>
+  <link rel="stylesheet" type="text/css" href="travel_submit_itinerary.css"/>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
 </head>
 <body>
+<!-- 
+<h1>Submit an itinerary</h1> -->
 
-<h1>Submit an itinerary</h1>
+<div class='homeHeader'>
+      <div id="button_header">
+        <button id='submitButton'>Home</button>
+      </div>
 
-<div id="submit-form"> 
-<p id="contact-para">Complete the form below to submit your itinerary.</p>
+<div id="homeTitle">
+      <h1 id='landingHeader'>Complete the form below to submit your itinerary.</h1>
+
+<div id="form">
  <form action="http://formspree.io/yjamie.corley@cutoutcopy.com" method="POST" id="form1">
   <p><label>Where did you go?<input type="text" name="where"/></label></p>
   <p><label>When did you go?<input type="text" name="when"/></label></p>  <!-- Will change to a calendar plug-in -->
@@ -20,6 +29,7 @@
  	<textarea name="tips" form="usrform" rows="5" cols="40"></textarea>
   <p id="submit"><input type="submit" value="send"><p>
   	<input type="hidden" name="_next" value="//site.io/thanks.html" />
+</div>
 <!-- <p><button id="Submit" type="button" value="send" onclick="myFunction()">Submit</button></p>
                 <script>
                 function myFunction() {
