@@ -3,8 +3,6 @@
 	font-weight: lighter;
 }
 
-/*test*/
-
 div {
 	border: 1px solid black;
 }
@@ -22,6 +20,14 @@ div {
 #submitButton {
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
+	text-align: center;
+}
+
+#favoriteButton {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+	width: 100%;
 }
 
 #button_header {
@@ -29,6 +35,22 @@ div {
 	float: right;
 }
 
-#form {
+#itinerary {
 	padding: 15px 15px 15px 15px;
 }
+
+/*more*/
+
+#image1 {
+	padding: 15px 15px 15px 15px;
+	margin-bottom: 15px;
+}
+
+.itinerary {
+	width: 50%;
+}
+/*NOTE: I'm trying to make the text align with the photo*/
+
+
+
+
