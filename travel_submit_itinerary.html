@@ -35,6 +35,9 @@ function submitMe(formObj){
         	activities: formObj.activities.value,
             transportation: formObj.how.value,
             tips: formObj.tips.value
+        }, function(error){
+            if(error) return alert(error);
+            alert("Your itinerary has been submitted");
         });
         return false;
 }
