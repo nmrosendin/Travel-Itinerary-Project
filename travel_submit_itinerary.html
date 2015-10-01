@@ -2,45 +2,46 @@
 <html>
 <head>
 <title>Submit an Itinerary </title>
-  <link rel="stylesheet" type="text/css" href="travel_submit_itinerary.css"/>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
+<script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
 </head>
 <body>
-<!-- 
-<h1>Submit an itinerary</h1> -->
 
-<div class='homeHeader'>
-      <div id="button_header">
-        <button id='submitButton'>Home</button>
-      </div>
+<h1>Submit an itinerary</h1>
 
-<div id="homeTitle">
-      <h1 id='landingHeader'>Complete the form below to submit your itinerary.</h1>
-
-<div id="form">
- <form action="http://formspree.io/yjamie.corley@cutoutcopy.com" method="POST" id="form1">
+<div id="submit-form">
+<p id="contact-para">Complete the form below to submit your itinerary.</p>
+ <form onsubmit="return submitMe(this)">
   <p><label>Where did you go?<input type="text" name="where"/></label></p>
   <p><label>When did you go?<input type="text" name="when"/></label></p>  <!-- Will change to a calendar plug-in -->
- <p><label>What did you do?</label></p> 
- 	<textarea name="tips" form="usrform" rows="5" cols="40"></textarea>
+ <p><label>What did you do?</label></p>
+ 	<textarea name="activities" rows="5" cols="40"></textarea>
   <p><label>How did you get there?<input type="text" name="how"/></label></p>
 
- <p><label>Additional tips</label></p> 
- 	<textarea name="tips" form="usrform" rows="5" cols="40"></textarea>
+ <p><label>Additional tips</label></p>
+ 	<textarea name="tips" rows="5" cols="40"></textarea>
   <p id="submit"><input type="submit" value="send"><p>
   	<input type="hidden" name="_next" value="//site.io/thanks.html" />
-</div>
-<!-- <p><button id="Submit" type="button" value="send" onclick="myFunction()">Submit</button></p>
-                <script>
-                function myFunction() {
-                    document.getElementById("Submit").innerHTML = "Thank you!";
-                }
-                </script>
- -->
+
 </form>
 </div>
 
 
+<script>
+var myFirebaseRef = new Firebase ("https://amber-heat-5381.firebaseio.com");
+function submitMe(formObj){
+        myFirebaseRef.push({
+        	destination: formObj.where.value,
+        	date: formObj.when.value,
+        	activities: formObj.activities.value,
+            transportation: formObj.how.value,
+            tips: formObj.tips.value
+        }, function(error){
+            if(error) return alert(error);
+            alert("Your itinerary has been submitted");
+        });
+        return false;
+}
+</script>
 
 </body>
 </html>
