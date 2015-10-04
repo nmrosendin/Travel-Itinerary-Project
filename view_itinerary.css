@@ -7,21 +7,18 @@ div {
 	border: 1px solid black;
 }
 
-#hometitle, h1 {
-	display: inline-block;
-	width: 100%;
-}
-
-#landingHeader, h1 {
-	margin-top: 50px;
-	text-align: center;
-}
-
-#submitButton {
+#submitButton, #myProfile, #home {
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
+	padding: 10px 10px 10px 10px;
+}
+
+h1 {
+	display: inline-block;
+	width: 100%;
 	text-align: center;
 }
+
 
 #favoriteButton {
 	display: inline-block;

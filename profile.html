@@ -8,10 +8,53 @@
 	<link rel="stylesheet" type="text/css" href="profile.css"/>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
 <body>
+	<div class='homeHeader'>
+		<div id="button_header">
+			<button id='submitButton'>Submit an Itinerary</button>
+			<button id='myProfile'>My Profile</button>
+			<button id='home'>Home</button>
+		</div>
+	</div>
 	<div class= 'profile header'>
 		<img src="images/kittensplaceholder.jpg">
-		<h2>My Profile</h2>
-
+		<h2>My Name</h2>
 	</div>
+	<table id='table'>
+			<tbody>
+				<tr class='images'>
+					<!-- <td>
+						<img src="images/sanfrancisco.jpg" height="150px" width="180px">
+					</td>
+					<td>
+						<img src="images/paris.jpg" height="150px" width="180px">
+					</td>
+					<td>
+						<img src="images/shanghai.jpg" height="150px" width="180px">
+					</td> -->
+				</tr>
+			</tbody>
+		</table>
 </body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#submitButton").click(function(){
+       		 console.log("hi");
+        window.location.href="travel_submit_itinerary.html"
+    		});
+		});
+
+		$(document).ready(function(){
+    		$('#home').click(function(){
+        		console.log("hi");
+        window.location.href="landingpage.html"
+    		});
+		});
+
+		$(document).ready(function(){
+    		$('#myProfile').click(function(){
+        		console.log("hi");
+        window.location.href="profile.html"
+    		});
+		});
+	</script>
 </html>

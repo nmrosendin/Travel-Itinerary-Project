@@ -13,3 +13,11 @@ $(document).ready(function(){
         window.location.href="profile.html"
     });
 });
+
+$(document).ready(function(){
+
+    $("#home").click(function(){
+        console.log("hi");
+        window.location.href="landingpage.html"
+    });
+});
