@@ -16,6 +16,7 @@
     <button id='home'>Home</button>
   </div>
 </div>
+</head>
 
 <h1>Submit an itinerary</h1>
 
@@ -35,6 +36,19 @@
 
 
   </form>
+<div id='submitBody'>
+  <h1>Submit Your Itinerary</h1>
+  <div id="submit-form">
+    <form onsubmit="return submitMe(this)">
+      <input placeholder='Where did you travel to?' type='text' name="where">
+      <input placeholder='When did you go?' type='text' name="when"><!-- Will change to a calendar plug-in -->
+      <textarea placeholder='What did you do?' type=text name="what" rows="5" cols="40"></textarea>
+      <input placeholder='How did you get there?' type=text name="how">
+      <textarea placeholder='Additional tips?' type="text" name="tips" rows="5" cols="40"></textarea>
+      <input id='sendButton' type="submit" value="Send">
+      <input type="hidden" name="_next" value="//site.io/thanks.html">
+    </form>
+  </div>
 </div>
 
 
