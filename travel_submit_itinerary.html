@@ -16,24 +16,19 @@
     <button id='home'>Home</button>
   </div>
 </div>
-
-<h1>Submit an itinerary</h1>
-
-<div id="submit-form">
-<p id="contact-para">Complete the form below to submit your itinerary.</p>
- <form onsubmit="return submitMe(this)">
-  <p><label>Where did you go?<input type="text" name="where"/></label></p>
-  <p><label>When did you go?<input type="text" name="when"/></label></p>  <!-- Will change to a calendar plug-in -->
-  <p><label>What did you do?</label></p>
- 	<textarea name="activities" rows="5" cols="40"></textarea>
-  <p><label>How did you get there?<input type="text" name="how"/></label></p>
-
-  <p><label>Additional tips</label></p>
- 	<textarea name="tips" rows="5" cols="40"></textarea>
-  <p id="submit"><input type="submit" value="send"><p>
-  	<input type="hidden" name="_next" value="//site.io/thanks.html" />
-
-  </form>
+<div id='submitBody'>
+  <h1>Submit Your Itinerary</h1>
+  <div id="submit-form">
+    <form onsubmit="return submitMe(this)">
+      <input placeholder='Where did you travel to?' type='text' name="where">
+      <input placeholder='When did you go?' type='text' name="when"><!-- Will change to a calendar plug-in -->
+      <textarea placeholder='What did you do?' type=text name="what" rows="5" cols="40"></textarea>
+      <input placeholder='How did you get there?' type=text name="how">
+      <textarea placeholder='Additional tips?' type="text" name="tips" rows="5" cols="40"></textarea>
+      <input id='sendButton' type="submit" value="Send">
+      <input type="hidden" name="_next" value="//site.io/thanks.html">
+    </form>
+  </div>
 </div>
 
 
