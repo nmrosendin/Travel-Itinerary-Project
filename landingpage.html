@@ -99,5 +99,15 @@ $("#1").click(function(){
 		$('.images').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
 	});
 
+	FB.login(
+  function(response) {
+    console.log(response);
+  },
+  {
+    scope: 'user_likes',
+    auth_type: 'rerequest'
+  }
+);
+
 	</script>
 </html>
