@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Submit an Itinerary! </title>
+  <title>Submit an Itinerary </title>
   <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
   <link rel="stylesheet" type="text/css" href="travel_submit_itinerary.css"/>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
@@ -18,28 +18,11 @@
 </div>
 </head>
 
-<h1>Submit an itinerary</h1>
-
-<div id="submit-form">
-<p id="contact-para">Complete the form below to submit your itinerary.</p>
- <form onsubmit="return submitMe(this)">
-  <p><label>Where did you go?<input type="text" name="where"/></label></p>
-  <p><label>When did you go?<input type="text" name="when"/></label></p>  <!-- Will change to a calendar plug-in -->
-  <p><label>What did you do?</label></p>
- 	<textarea name="activities" rows="5" cols="40"></textarea>
-  <p><label>How did you get there?<input type="text" name="how"/></label></p>
-  <p>Add an image from your trip</p><input type="file" name="pic" accept="image/*">
-  <p><label>Additional tips</label></p>
- 	<textarea name="tips" rows="5" cols="40"></textarea>
-  <p id="submit"><input type="submit" value="send"><p>
-  	<input type="hidden" name="_next" value="//site.io/thanks.html" />
-
-
   </form>
 <div id='submitBody'>
   <h1>Submit Your Itinerary</h1>
   <div id="submit-form">
-    <form onsubmit="return submitMe(this)">
+    <form onsubmit="return submitButton(this)">
       <input placeholder='Where did you travel to?' type='text' name="where">
       <input placeholder='When did you go?' type='text' name="when"><!-- Will change to a calendar plug-in -->
       <textarea placeholder='What did you do?' type=text name="what" rows="5" cols="40"></textarea>
@@ -53,6 +36,22 @@
 
 
 <script>
+
+var myFirebaseRef = new Firebase ("https://amber-heat-5381.firebaseio.com");
+function submitButton(formObj){
+        myFirebaseRef.push({
+        	destination: formObj.where.value,
+        	date: formObj.when.value,
+            transportation: formObj.how.value,
+            tips: formObj.tips.value,
+            timestamp: Date.now()
+        }, function(error){
+            if(error) return alert(error);
+            alert("Your itinerary has been submitted");
+        });
+        return false;
+}
+
   $(document).ready(function(){
     $("#myProfile").click(function(){
         console.log("hi");
