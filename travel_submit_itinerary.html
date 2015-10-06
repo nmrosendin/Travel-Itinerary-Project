@@ -27,6 +27,7 @@
       <input placeholder='When did you go?' type='text' name="when"><!-- Will change to a calendar plug-in -->
       <textarea placeholder='What did you do?' type=text name="what" rows="5" cols="40"></textarea>
       <input placeholder='How did you get there?' type=text name="how">
+      <input placehold='Upload a photo of your trip'type="file" name="pic" accept="image/*">
       <textarea placeholder='Additional tips?' type="text" name="tips" rows="5" cols="40"></textarea>
       <input id='sendButton' type="submit" value="Send">
       <input type="hidden" name="_next" value="//site.io/thanks.html">
@@ -43,6 +44,7 @@ function submitButton(formObj){
         	destination: formObj.where.value,
         	date: formObj.when.value,
             transportation: formObj.how.value,
+            photo: formObj.pic.value,
             tips: formObj.tips.value,
             timestamp: Date.now()
         }, function(error){
