@@ -99,15 +99,14 @@ $("#1").click(function(){
 		$('.images').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
 	});
 
-	FB.login(
-  function(response) {
-    console.log(response);
-  },
-  {
-    scope: 'user_likes',
-    auth_type: 'rerequest'
-  }
-);
+	<script>
+document.getElementById('FB').onclick = function() {
+  FB.login(function(response) {
+    Log.info('FB.login response', response);
+  }, {scope: 'user_friends, publish_actions'});
+  return false;
+}
+</script>
 
 	</script>
 </html>
