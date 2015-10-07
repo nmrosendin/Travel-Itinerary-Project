@@ -4,26 +4,32 @@ $(document).ready(function(){
         console.log("hi");
         window.location.href="travel_submit_itinerary.html"
     });
-});
-
-$(document).ready(function(){
 
     $("#myProfile").click(function(){
         console.log("hi");
         window.location.href="profile.html"
     });
-});
-
-$(document).ready(function(){
 
     $("#home").click(function(){
         console.log("hi");
         window.location.href="landingpage.html"
     });
-});
 
-$(document).ready(function(){
+<<<<<<< HEAD
+    // var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
+    // ref.authWithOAuthPopup("facebook", function(error, authData) { d93713f82b19709de0f521137e0cab03 }, {
+    //     remember: "sessionOnly",
+    //     scope: "email,user_likes"
+    // });
+=======
+    $('#searchBox').click(function(e){
+         e.preventDefault();
+         var str = $('#search_location').val();
+         console.log(str);
+    });
+>>>>>>> master
 
+// var str = $('#search_submit').val();
     // var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
     // ref.authWithOAuthPopup("facebook", function(error, authData) { d93713f82b19709de0f521137e0cab03 }, {
     //     remember: "sessionOnly",
@@ -37,7 +43,7 @@ $(document).ready(function(){
                 console.log("Login Failed!", error);
             } else {
                 console.log("Authenticated successfully with payload:", authData);
-                    }
-            });
+            }
         });
     });
+});

@@ -15,25 +15,12 @@
 			<button id='home'>Home</button>
 		</div>
 	</div>
-	<div class= 'profile header'>
-		<img src="images/kittensplaceholder.jpg">
-		<h2>My Name</h2>
+	<div id= 'profileheader'>
+		<div id='avatarname'>
+			<img id='kittens' src="images/kittensprofile.jpg">
+			<h2 id='username'>My Name</h2>
+		</div>
 	</div>
-	<table id='table'>
-			<tbody>
-				<tr class='images'>
-					<!-- <td>
-						<img src="images/sanfrancisco.jpg" height="150px" width="180px">
-					</td>
-					<td>
-						<img src="images/paris.jpg" height="150px" width="180px">
-					</td>
-					<td>
-						<img src="images/shanghai.jpg" height="150px" width="180px">
-					</td> -->
-				</tr>
-			</tbody>
-		</table>
 </body>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -42,14 +29,12 @@
         window.location.href="travel_submit_itinerary.html"
     		});
 		});
-
 		$(document).ready(function(){
     		$('#home').click(function(){
         		console.log("hi");
         window.location.href="landingpage.html"
     		});
 		});
-
 		$(document).ready(function(){
     		$('#myProfile').click(function(){
         		console.log("hi");
