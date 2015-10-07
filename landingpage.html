@@ -99,9 +99,14 @@ ref.orderByChild("timestamp").limitToLast(5).on("child_added", function(snapshot
 	var data = snapshot.val();
 
 	for (var i = 0; i < 1; i++) {
-		console.log(data);
-		$(data[0]).append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
-		$('#2').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+		// console.log(data);
+
+		for (var i = 0; i < data.length; i++) {
+			console.log(data[i]);
+		}
+	$('#1').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#2').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+
 	}
 });
 
