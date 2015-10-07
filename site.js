@@ -24,11 +24,11 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-    var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
-    ref.authWithOAuthPopup("facebook", function(error, authData) { d93713f82b19709de0f521137e0cab03 }, {
-        remember: "sessionOnly",
-        scope: "email,user_likes"
-    });
+    // var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
+    // ref.authWithOAuthPopup("facebook", function(error, authData) { d93713f82b19709de0f521137e0cab03 }, {
+    //     remember: "sessionOnly",
+    //     scope: "email,user_likes"
+    // });
 
     $("#FB").click(function(){
         var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
