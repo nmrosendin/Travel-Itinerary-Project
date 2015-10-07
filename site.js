@@ -27,6 +27,21 @@ $(document).ready(function(){
     //     remember: "sessionOnly",
     //     scope: "email,user_likes"
     // });
+    
+    var user = ref.getAuth();
+        if (user==null) {
+      //user not logged in
+            console.log('notloggedin');
+            $("#logout").hide();
+            $("#FB").show();
+            $('#myProfile').hide();
+            $('#submitButton').hide();
+            $('#home').hide();
+        } else {
+            console.log('loggedin');
+            $("#logout").show();
+            $("#FB").hide();
+        }
 
     $("#FB").click(function(){
         var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
@@ -38,4 +53,10 @@ $(document).ready(function(){
             }
         });
     });
-});
+
+    $("#logout").click(function(){
+        console.log("logmeout");
+        ref.unauth();
+        window.location.href="landingpage.html"
+    });
+ });
