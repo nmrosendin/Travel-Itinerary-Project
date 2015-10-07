@@ -1,0 +1,61 @@
+* {
+	font-family: Lato;
+}
+
+#profileheader {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 200px;
+	width: 100%;
+    position: absolute;
+    background-image: url("images/158H.jpg");
+    background-repeat: no-repeat;
+}
+
+
+#avatarname {
+    padding: 10px;
+    position: absolute;
+    width: 30%;
+    z-index: 3;
+    height: 100%;
+    margin-left: 35%;
+    margin-top: 12%;
+
+}
+
+#kittens {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#username {
+	display: inline-block;
+	position: absolute;
+	z-index: 3;
+	margin-top: 60%;
+    text-align: center;
+    width: 150px;
+}	
+
+.homeHeader {
+	display: inline-block;
+	width: 100%;
+}
+
+#button_header {
+	display: inline-flex;
+	float: right;
+}
+
+#submitButton, #home, #myProfile {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 10px 10px 10px;
+}
