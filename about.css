@@ -1,0 +1,26 @@
+.homeHeader {
+	display: inline-block;
+	width: 100%;
+}
+
+#button_header {
+	display: inline-flex;
+	float: right;
+}
+
+#submitButton, #home, #myProfile {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 10px 10px 10px;
+}
+
+#aboutSection, #aboutPara {
+	display: inline-block;
+	width: 100%;
+}
+
+#aboutPara, #aboutHeader {
+	margin-top: 80px;
+	text-align: center;
+
+}
