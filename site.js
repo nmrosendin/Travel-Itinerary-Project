@@ -28,20 +28,21 @@ $(document).ready(function(){
     //     scope: "email,user_likes"
     // });
 
-    var user = ref.getAuth();
-        if (user==null) {
-      //user not logged in
-            console.log('notloggedin');
-            $("#logout").hide();
-            $("#FB").show();
-            $('#myProfile').hide();
-            $('#submitButton').hide();
-            $('#home').hide();
-        } else {
-            console.log('loggedin');
-            $("#logout").show();
-            $("#FB").hide();
-        }
+    // var user = ref.getAuth();
+    //     if (user==null) {
+    //     //user not logged in
+    //         console.log('notloggedin');
+    //         $("#logout").hide();
+    //         $("#FB").show();
+    //         $('#myProfile').hide();
+    //         $('#home').hide();
+
+    //     } else {
+    //      //user is logged in
+    //         console.log('loggedin');
+    //         $("#logout").show();
+    //         $("#FB").hide();
+    //     }
 
     $("#FB").click(function(){
         var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
@@ -52,6 +53,22 @@ $(document).ready(function(){
                 console.log("Authenticated successfully with payload:", authData);
                 window.location.reload(true);
             }
+        var user = ref.getAuth();
+        if (user==null) {
+        //user not logged in
+            console.log('notloggedin');
+            $("#logout").hide();
+            $("#FB").show();
+            $('#myProfile').hide();
+            $('#home').hide();
+            
+        } else {
+         //user is logged in
+            console.log('loggedin');
+            $("#logout").show();
+            $("#FB").hide();
+        }
+
         });
     });
 
