@@ -15,15 +15,11 @@ $(document).ready(function(){
         window.location.href="index.html"
     });
 
-<<<<<<< HEAD
-=======
-
     $('#searchBox').click(function(e){
          e.preventDefault();
          var str = $('#search_location').val();
          console.log(str);
     });
->>>>>>> 681ec8ebbb6bf23cabcc3918e41bcdaaf2f8d7eb
 
 // var str = $('#search_submit').val();
     // var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
