@@ -15,11 +15,6 @@ $(document).ready(function(){
         window.location.href="landingpage.html"
     });
 
-    $('#searchBox').click(function(e){
-         e.preventDefault();
-         var str = $('#search_location').val();
-         console.log(str);
-    });
 
 // var str = $('#search_submit').val();
     // var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");

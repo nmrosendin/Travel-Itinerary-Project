@@ -32,6 +32,7 @@
 				<button id='myProfile'>My Profile</button>
 				<button id='home'>Home</button>
 				<button id='FB'>Login with Facebook</button>
+				<button id='logout'>Logout</button>
 			</div>
 		</div>
 		<div id="homeTitle">
@@ -48,25 +49,23 @@
 				<div id="owl-demo" class="owl-carousel" style="height:auto;">
 			        <div class="item" id="1"></></div>
 			    	<div class="item" id="2"></></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Shanghai&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Seoul&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Denver&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Hong Kong&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Athens&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Sydney&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Aukland&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Cape Town&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=London&w=350&h=150"/></div>
-					<div class="item" id="1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Barcelona&w=350&h=150"/></div>
+					<div class="item" id="3"></></div>
+					<div class="item" id="4"></></div>
+					<div class="item" id="5"></></div>
+					<div class="item" id="6"></></div>
+					<div class="item" id="7"></div>
+					<div class="item" id="8"></></div>
+					<div class="item" id="9"></></div>
+					<div class="item" id="10"></></div>
+					<div class="item" id="11"></div>
+					<div class="item" id="12"></></div>
 			    </div>
 			</div>
 		</div>
 	</body>
 
 <script type="text/javascript">
-
 $(document).ready(function() {
-
 	$("#owl-demo").owlCarousel({
 		autoPlay: 3000, //Set AutoPlay to 3 seconds
 		items : 4,
@@ -95,25 +94,32 @@ $('form').submit(function(e){
 	searchForDestination(e.val());
 });
 //puts last 3 in boxes below the search
-ref.orderByChild("timestamp").limitToLast(5).on("child_added", function(snapshot) {
+ref.orderByChild("timestamp").limitToLast(1).on("child_added", function(snapshot) {
 	var data = snapshot.val();
-
 	for (var i = 0; i < 1; i++) {
 		// console.log(data);
-
 		for (var i = 0; i < data.length; i++) {
 			console.log(data[i]);
 		}
 	$('#1').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
 	$('#2').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
-
+	$('#3').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#4').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#5').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#6').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#7').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#8').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#9').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#10').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#11').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
+	$('#12').append('<td>Destination: ' + data.destination + '<br> Date: '+ data.date +'</td>' );
 	}
 });
-
-// var data = snapshot.val();
-// console.log(snapshot.val);
-// for (var i = 0; i < data.length; i++) {
-// 	$('#owl-demo').append('<td>Destination: ' + data[i] + '<br> Date: '+ data[i] +'</td>' );
-// }
+document.getElementById('FB').onclick = function() {
+  FB.login(function(response) {
+    Log.info('FB.login response', response);
+  }, {scope: 'user_friends, publish_actions'});
+  return false;
+}
 	</script>
 </html>
