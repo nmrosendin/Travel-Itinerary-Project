@@ -31,7 +31,7 @@ $(document).ready(function(){
     //     remember: "sessionOnly",
     //     scope: "email,user_likes"
     // });
-    
+
     var user = ref.getAuth();
         if (user==null) {
       //user not logged in
