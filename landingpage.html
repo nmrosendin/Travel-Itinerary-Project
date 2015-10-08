@@ -111,22 +111,11 @@ ref.orderByChild("timestamp").limitToLast(5).on("child_added", function(snapshot
 	}
 });
 
-<<<<<<< HEAD
-	<script>
 document.getElementById('FB').onclick = function() {
   FB.login(function(response) {
     Log.info('FB.login response', response);
   }, {scope: 'user_friends, publish_actions'});
   return false;
 }
-</script>
-
-=======
-// var data = snapshot.val();
-// console.log(snapshot.val);
-// for (var i = 0; i < data.length; i++) {
-// 	$('#owl-demo').append('<td>Destination: ' + data[i] + '<br> Date: '+ data[i] +'</td>' );
-// }
->>>>>>> master
 	</script>
 </html>
