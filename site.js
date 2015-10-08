@@ -15,6 +15,7 @@ $(document).ready(function(){
         window.location.href="index.html"
     });
 
+
     $('#searchBox').click(function(e){
          e.preventDefault();
          var str = $('#search_location').val();
