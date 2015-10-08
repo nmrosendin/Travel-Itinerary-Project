@@ -6,7 +6,8 @@
   <link rel="stylesheet" type="text/css" href="travel_submit_itinerary.css"/>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="site.js"></script>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  
 </head>
 <body>
 <div class='homeHeader'>
@@ -24,7 +25,24 @@
   <div id="submit-form">
     <form onsubmit="return submitButton(this)">
       <input placeholder='Where did you travel to?' type='text' name="where">
-      <input placeholder='When did you go?' type='text' name="when"><!-- Will change to a calendar plug-in -->
+      <input placeholder='Departure date' type='text' name="when" id="datepicker">
+      <input placeholder='Return date' type='text' name="when" id="datepickertwo">
+
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#datepickertwo" ).datepicker();
+  });
+  </script>
+
       <textarea placeholder='What did you do?' type=text name="what" rows="5" cols="40"></textarea>
       <input placeholder='How did you get there?' type=text name="how">
       <input placehold='Upload a photo of your trip'type="file" name="pic" accept="image/*">
@@ -39,8 +57,8 @@
 var myFirebaseRef = new Firebase ("https://amber-heat-5381.firebaseio.com");
 function submitButton(formObj){
         myFirebaseRef.push({
-        	destination: formObj.where.value,
-        	date: formObj.when.value,
+          destination: formObj.where.value,
+          date: formObj.when.value,
             transportation: formObj.how.value,
             photo: formObj.pic.value,
             tips: formObj.tips.value,
@@ -51,19 +69,24 @@ function submitButton(formObj){
         });
         return false;
 }
-
   $(document).ready(function(){
     $("#myProfile").click(function(){
         console.log("hi");
-        window.location.href="profile.html" 
+        window.location.href="profile.html"
     });
-
+  });
+  $(document).ready(function(){
     $("#home").click(function(){
         console.log("hi");
-        window.location.href="index.html"
+        window.location.href="landingpage.html"
     });
-  }); 
-
+  });
+  $(document).ready(function(){
+    $("#submitButton").click(function(){
+        console.log("hi");
+        window.location.href="travel_submit_itinerary.html"
+    });
+  });
 </script>
 
 </body>
