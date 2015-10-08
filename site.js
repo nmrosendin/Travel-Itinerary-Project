@@ -12,7 +12,7 @@ $(document).ready(function(){
 
     $("#home").click(function(){
         console.log("hi");
-        window.location.href="landingpage.html"
+        window.location.href="index.html"
     });
 
     $('#searchBox').click(function(e){
@@ -50,6 +50,7 @@ $(document).ready(function(){
                 console.log("Login Failed!", error);
             } else {
                 console.log("Authenticated successfully with payload:", authData);
+                window.location.reload(true);
             }
         });
     });
@@ -57,6 +58,6 @@ $(document).ready(function(){
     $("#logout").click(function(){
         console.log("logmeout");
         ref.unauth();
-        window.location.href="landingpage.html"
+        window.location.href="index.html"
     });
  });
