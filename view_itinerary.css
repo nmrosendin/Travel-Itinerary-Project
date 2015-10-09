@@ -35,15 +35,9 @@ results_itin {
 	text-align: center;
 }
 
-
-#favoriteButton {
-	display: inline-block;
-	margin: 5px 5px 5px 5px;
-	padding: 10px 10px 10px 10px;
-	float: center;
-
+#heartsp{
+	text-align: center;
 }
-
 #button_header {
 	display: inline-flex;
 	float: right;

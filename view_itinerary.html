@@ -87,7 +87,50 @@ New stuff -->
         </div>
       </div>
 </div> -->
+<style type="text/css">
+#heartsp {
+ position: relative;
+ width: 50px;
+ height: 45px;
+ margin: 0 auto;
+}
+#heartsp:before, #heartsp:after {
+ position: absolute;
+ content: "";
+ left: 25px;
+ top: 0;
+ width: 25px;
+ height: 40px;
+ background: rgb(238, 218, 246);
+ -moz-border-radius: 50px 50px 0 0;
+ border-radius: 50px 50px 0 0;
+ -webkit-transform: rotate(-45deg);
+ -moz-transform: rotate(-45deg);
+ -ms-transform: rotate(-45deg);
+ -o-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+ -webkit-transform-origin: 0 100%;
+ -moz-transform-origin: 0 100%;
+ -ms-transform-origin: 0 100%;
+ -o-transform-origin: 0 100%;
+ transform-origin: 0 100%;
+}
+#heartsp:after {
+ left: 0;
+ -webkit-transform: rotate(45deg);
+ -moz-transform: rotate(45deg);
+ -ms-transform: rotate(45deg);
+ -o-transform: rotate(45deg);
+ transform: rotate(45deg);
+ -webkit-transform-origin: 100% 100%;
+ -moz-transform-origin: 100% 100%;
+ -ms-transform-origin: 100% 100%;
+ -o-transform-origin: 100% 100%;
+ transform-origin :100% 100%;
+}
+</style>
 
+<div id="heartsp"></div>
 </body>
 
 <script type="text/javascript">
@@ -108,7 +151,7 @@ New stuff -->
               "<div id='depart'>" + data.depart + "</div>" +
               "<div id='tips'>" + data.tips + "</p>" +
               "<div>" +
-                "<button id='favoriteButton'>Favorite</button>" + "<br><br><br>" +
+                "<div id = 'heartsp'</div>" + "<br><br><br>" +
               "</div>")
 
               $('#itineraryResult').append(results_itin)
