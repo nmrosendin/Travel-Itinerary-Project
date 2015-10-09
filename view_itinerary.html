@@ -26,7 +26,7 @@
 
 <!-- itinerary -->
  <!-- grid -->
-<div class="allGrid">
+<!-- <div class="allGrid">
 <p id="dayPara">Day one</p>
  <div class="row">
     <div class="six columns">
@@ -55,9 +55,9 @@
     </div>
  </div>
 
-<!-- New stuff -->
+New stuff -->
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="nine columns">
       <img src="images/shanghai.jpg" id="image1" width="100%"/>
     </div>
@@ -86,7 +86,7 @@
              <img src="images/sanfrancisco.jpg" id="image1" width="100%"/>
         </div>
       </div>
-</div>
+</div> -->
 
 </body>
 
@@ -101,16 +101,17 @@
       }
 
       function searchForDestination(destination) {
-          ref.orderByChild("destination").equalTo(destination).limitToLast(2).on("child_added", function(snapshot) {
+          ref.orderByChild("destination").equalTo(destination).limitToLast(10).on("child_added", function(snapshot) {
               var data = snapshot.val();
-              console.log(data);
-              $('#itineraryResult').append("<h1 id='destination'>" + data.destination + "</h1>" +
-              "<h2 id='depart'>By Jamie Corley</h2>" +
-              "<div>" + data.depart + "</div>" +
-              "<p>" + data.tips + "</p>" +
+
+              var results_itin = ("<h1 id='destination'>" + data.destination + "</h1>" +
+              "<div id='depart'>" + data.depart + "</div>" +
+              "<div id='tips'>" + data.tips + "</p>" +
               "<div>" +
-                "<button id='favoriteButton'>Favorite</button>" +
+                "<button id='favoriteButton'>Favorite</button>" + "<br><br><br>" +
               "</div>")
+
+              $('#itineraryResult').append(results_itin)
           });
       }
 

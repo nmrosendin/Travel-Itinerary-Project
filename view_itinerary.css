@@ -22,7 +22,14 @@
 
 /*end css heading*/
 
-h1, h2, #itineraryDescription {
+h1, h2, #tips, #depart, #itineraryDescription {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+results_itin {
+	border: 2px solid;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
@@ -33,7 +40,7 @@ h1, h2, #itineraryDescription {
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
-	float: right;
+	float: center;
 
 }
 
@@ -158,5 +165,3 @@ text-align: center
   .offset-by-one-half.columns     { margin-left: 52%; }
 
 }
-
-
