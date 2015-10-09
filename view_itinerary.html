@@ -21,12 +21,7 @@
   <!-- Page specific code -->
 
   <div id="itineraryResult">
-    <h1>London, UK</h1>
-    <h2>By Jamie Corley</h2>
-    <p id="itineraryDescription">Three days. Solo traveller. Departed from: Washington, DC.</p>
-  <div>
-      <button id='favoriteButton'>Favorite</button>
-  </div>
+
 </div>
 
 <!-- itinerary -->
@@ -97,12 +92,27 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
+	var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 
       if(window.location.search) {
           console.log(window.location.search)
-          $('h1').html(decodeURIComponent(window.location.search).split('?')[1])
+          var place = decodeURIComponent(window.location.search).split('?')[1];
+          searchForDestination(place);
       }
 
+      function searchForDestination(destination) {
+          ref.orderByChild("destination").equalTo(destination).limitToLast(2).on("child_added", function(snapshot) {
+              var data = snapshot.val();
+              console.log(data);
+              $('#itineraryResult').append("<h1 id='destination'>" + data.destination + "</h1>" +
+              "<h2 id='depart'>By Jamie Corley</h2>" +
+              "<div>" + data.depart + "</div>" +
+              "<p>" + data.tips + "</p>" +
+              "<div>" +
+                "<button id='favoriteButton'>Favorite</button>" +
+              "</div>")
+          });
+      }
 
     $("#home").click(function(){
         console.log("hi");
