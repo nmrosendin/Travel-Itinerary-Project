@@ -9,7 +9,7 @@
     <script src="site.js"></script>
 </head>
 <body>
-<div class="all">  
+<div class="all">
   <div class='homeHeader'>
     <div id="button_header">
       <button id='submitButton'>Submit an Itinerary</button>
@@ -28,7 +28,7 @@
       <button id='favoriteButton'>Favorite</button>
   </div>
 </div>
-  
+
 <!-- itinerary -->
  <!-- grid -->
 <div class="allGrid">
@@ -64,49 +64,56 @@
 
   <div class="row">
     <div class="nine columns">
-      <img src="images/shanghai.jpg" id="image1" width="100%"/> 
+      <img src="images/shanghai.jpg" id="image1" width="100%"/>
     </div>
     <div class="three columns">
       <div class="row">
-        <img src="images/shanghai.jpg" id="image1" width="100%"/> 
+        <img src="images/shanghai.jpg" id="image1" width="100%"/>
       </div>
       <div class="row">
-        <img src="images/paris.jpg" id="image1" width="100%"/> 
+        <img src="images/paris.jpg" id="image1" width="100%"/>
       </div>
       <div class="row">
-        <img src="images/paris.jpg" id="image1" width="100%"/> 
+        <img src="images/paris.jpg" id="image1" width="100%"/>
       </div>
     </div>
 
 <div class="row">
-    <img src="images/sanfrancisco.jpg" id="image1" width="100%"/> 
+    <img src="images/sanfrancisco.jpg" id="image1" width="100%"/>
 </div>
 
 <p id="dayPara">Day three</p>
  <div class="row">
         <div class="six columns">
-         <img src="images/paris.jpg" id="image1" width="100%"/> 
+         <img src="images/paris.jpg" id="image1" width="100%"/>
         </div>
         <div class="six columns">
              <img src="images/sanfrancisco.jpg" id="image1" width="100%"/>
         </div>
       </div>
 </div>
-  
+
 </body>
 
 <script type="text/javascript">
   $(document).ready(function(){
+
+      if(window.location.search) {
+          console.log(window.location.search)
+          $('h1').html(decodeURIComponent(window.location.search).split('?')[1])
+      }
+
+
     $("#home").click(function(){
         console.log("hi");
         window.location.href="index.html"
     });
-  
+
     $("#submitButton").click(function(){
         console.log("hi");
         window.location.href="travel_submit_itinerary.html"
     });
-  
+
     $("#myProfile").click(function(){
         console.log("hi");
         window.location.href="profile.html"
