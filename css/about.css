@@ -3,25 +3,54 @@
 	width: 100%;
 }
 
-
 #button_header {
 	display: inline-flex;
 	float: right;
 }
 
 #submitButton, #home, #myProfile {
-	display: inline-block;
+/*	display: inline-block;*/
+	text-align: left;
 	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
 }
 
+#aboutSection, #aboutHeader {
+	margin-top: 20px;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 1.5;
+}
+
 #aboutSection, #aboutPara {
 	display: inline-block;
-	width: 100%;
+	/*width: 100%;*/
+	font-style: lighter;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-#aboutPara, #aboutHeader {
-	margin-top: 80px;
-	text-align: center;
-
+#googlemaps { 
+  height: 100%; 
+  width: 100%; 
+  position:absolute; 
+  margin-top: 55px;
+  top: 0; 
+  left: 0; 
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
 }
+ 
+#textbox { 
+  position: relative; 
+  z-index: 1; /* The z-index should be higher than Google Maps */
+  width: 500px;
+  margin: 40px auto 0;
+  padding: 10px;
+  background: black;
+  height: auto;
+  opacity: .65; /* Set the opacity for a slightly transparent Google Form */ 
+  color: white;
+}
+
