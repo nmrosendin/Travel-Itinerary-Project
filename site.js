@@ -23,32 +23,8 @@ $(document).ready(function(){
     //     scope: "email,user_likes"
     // });
 
-    // var user = ref.getAuth();
-    //     if (user==null) {
-    //     //user not logged in
-    //         console.log('notloggedin');
-    //         $("#logout").hide();
-    //         $("#FB").show();
-    //         $('#myProfile').hide();
-    //         $('#home').hide();
-
-    //     } else {
-    //      //user is logged in
-    //         console.log('loggedin');
-    //         $("#logout").show();
-    //         $("#FB").hide();
-    //     }
-
-    $("#FB").click(function(){
-        var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
-        ref.authWithOAuthPopup("facebook", function(error, authData) {
-            if (error) {
-                console.log("Login Failed!", error);
-            } else {
-                console.log("Authenticated successfully with payload:", authData);
-                window.location.reload(true);
-            }
-        var user = ref.getAuth();
+    var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
+    var user = ref.getAuth();
         if (user==null) {
         //user not logged in
             console.log('notloggedin');
@@ -56,6 +32,7 @@ $(document).ready(function(){
             $("#FB").show();
             $('#myProfile').hide();
             $('#home').hide();
+            $('#submitButton').hide();
 
         } else {
          //user is logged in
@@ -64,12 +41,24 @@ $(document).ready(function(){
             $("#FB").hide();
         }
 
-        });
-    });
+    $("#FB").click(function(){
+        ref.authWithOAuthPopup("facebook", function(error, authData) {
+            if (error) {
+                console.log("Login Failed!", error);
+            } else {
+                console.log("Authenticated successfully with payload:", authData);
+                window.location.reload(true);
+              }
+         });
+     });
 
     $("#logout").click(function(){
         console.log("logmeout");
         ref.unauth();
         window.location.href="index.html"
+        $("#logout").hide();
+        $("#FB").show();
+        $('#myProfile').hide();
+        $('#home').hide();
     });
- });
+});
