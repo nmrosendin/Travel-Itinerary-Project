@@ -85,7 +85,7 @@ $('document').ready(function(){
 		var data = snapshot.val();
 		console.log(data.photo);
 			// <div class="item"></></div>
-		$('#owl-demo').append('<div class="item"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></div>')
+		$('#owl-demo').append('<a class="item" href="./view_itinerary.html?' + data.destination +  '"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></a>')
 	});
 
 	setTimeout(function() {
@@ -96,6 +96,8 @@ $('document').ready(function(){
 			itemsDesktopSmall : [979,3]
 		});
 	}, 800);
+
+
 	// var data = snapshot.val();
 	// console.log(snapshot.val);
 	// for (var i = 0; i < data.length; i++) {
