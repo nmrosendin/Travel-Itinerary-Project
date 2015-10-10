@@ -18,12 +18,14 @@
 		border-width: medium;
 		width: 100%;
 		height: auto;
+		text-align: center;
 	}
 
 	.item img{
 		display: block;
 		width: 100%;
 		height: auto;
+		opacity: .4;
 	}
 	</style>
 
@@ -81,11 +83,10 @@ $('document').ready(function(){
 
 	ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
 		var data = snapshot.val();
-		console.log(data);
+		console.log(data.photo);
 			// <div class="item"></></div>
-		$('#owl-demo')
-			.append('<div class="item"><img src="' + data.url + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></div>')
-			});
+		$('#owl-demo').append('<div class="item"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></div>')
+	});
 
 	setTimeout(function() {
 		$("#owl-demo").owlCarousel({

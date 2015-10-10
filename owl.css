@@ -118,6 +118,7 @@
 
 .owl-carousel .owl-item{
 	float: left;
+	padding: 0 4px;
 }
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
