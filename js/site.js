@@ -48,8 +48,17 @@ $(document).ready(function(){
             } else {
                 console.log("Authenticated successfully with payload:", authData);
                 window.location.reload(true);
-              }
-         });
+                //on successful login, display user profile picture
+                function newprofilediv() {
+                var newprofilediv = $("<div id='mynewprofilediv'></div>");
+                var image = 'http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg';
+                    $('#FB').click(function () {
+                        console.log('hi');
+                        $(".homeHeader").append(newprofilediv);
+                        $(newprofilediv).append(image);
+                    });
+                };
+        };
      });
 
     $("#logout").click(function(){
