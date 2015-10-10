@@ -83,12 +83,13 @@ $('document').ready(function(){
 		var data = snapshot.val();
 		console.log(data);
 			// <div class="item"></></div>
-		$('#owl-demo').append('<div class="item"><td>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></div>' );
-	});
+		$('#owl-demo')
+			.append('<div class="item"><img src="' + data.url + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></div>')
+			});
 
 	setTimeout(function() {
 		$("#owl-demo").owlCarousel({
-			autoPlay: 2200, //Set AutoPlay to 3 seconds
+			autoPlay: false, //Set AutoPlay to 3 seconds
 			items : 4,
 			itemsDesktop : [1199,3],
 			itemsDesktopSmall : [979,3]
@@ -103,10 +104,11 @@ $('document').ready(function(){
 	</script>
 
 <!-- Footer  -->
+<br><br><br><br><br><br><br>
 <div id="footer">
   <nav class="group">
   <ul id="primary-nav">
- 
+
  <li class="About">
   <a href="about.html">
   <span>About</span>
@@ -116,8 +118,8 @@ $('document').ready(function(){
   <a href="">
   <span>Facebook</span>
   </a>
-        
-   
+
+
   </li>
   <li class="Twitter">
   <a href="">

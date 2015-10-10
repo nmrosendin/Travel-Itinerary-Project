@@ -79,11 +79,14 @@ table {
 
 #footer {
     text-align: center;
-    padding:5px; 
+    padding:5px;
     padding-top: 5px;
     margin-top: 70px;
     width: 100%;
-    word-spacing: 30px; 
+    word-spacing: 30px;
     height: 3em;
 }
- 
+
+#footer a{
+	text-decoration: none;
+}
