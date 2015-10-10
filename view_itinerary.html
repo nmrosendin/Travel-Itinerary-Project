@@ -130,7 +130,7 @@ New stuff -->
 }
 </style>
 
-<div id="heartsp"></div>
+
 </body>
 
 <script type="text/javascript">
@@ -148,6 +148,7 @@ New stuff -->
               var data = snapshot.val();
 
               var results_itin = ("<h3 id='destination'>" + "Search Results for: " + data.destination + "</h3>" +
+              "<div id='resultsdestination'>" + data.destination + "</div>" +
               "<div id='depart'>" + data.depart + "</div>" +
               "<div id='tips'>" + data.tips + "</p>" +
               "<div>" +

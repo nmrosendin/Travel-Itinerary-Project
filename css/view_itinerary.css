@@ -22,7 +22,7 @@
 
 /*end css heading*/
 
-h1, h2, #tips, #depart, #itineraryDescription {
+h1, h2, #tips, #depart, #resultsdestination, #itineraryDescription {
 	display: inline-block;
 	width: 100%;
 	text-align: center;
