@@ -147,7 +147,7 @@ New stuff -->
           ref.orderByChild("destination").equalTo(destination).limitToLast(10).on("child_added", function(snapshot) {
               var data = snapshot.val();
 
-              var results_itin = ("<h1 id='destination'>" + data.destination + "</h1>" +
+              var results_itin = ("<h3 id='destination'>" + "Search Results for: " + data.destination + "</h3>" +
               "<div id='depart'>" + data.depart + "</div>" +
               "<div id='tips'>" + data.tips + "</p>" +
               "<div>" +
