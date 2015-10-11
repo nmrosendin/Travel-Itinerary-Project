@@ -63,11 +63,14 @@ $(document).ready(function(){
     // });
 
     //user is logged in
-    function loggedin() {
+    function loggedin(imageUrl) {
         console.log('loggedin');
         $("#logout").show();
         $("#FB").hide();
         $('#home').hide();
+        console.log('testpic');
+        $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
+        console.log('my profile pic1');        
     }
 
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
@@ -83,7 +86,9 @@ $(document).ready(function(){
         $('#submitButton').show();
 
     } else {
-      loggedin();
+      var info = user.uid.split(":")
+      var id = info[1];  
+      loggedin("https://graph.facebook.com/" + id + "/picture");
     }
 
     $("#FB").click(function(){
@@ -95,13 +100,10 @@ $(document).ready(function(){
                 console.log("Authenticated successfully with payload:", authData);
                 //window.location.reload(true);
                 //on successful login, display user profile picture
-                loggedin();
+                loggedin(authData.facebook.profileImageURL);
 
 
-                var image = authData.facebook.profileImageURL;
-                console.log('testpic');
-                $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + image + '"/></div>');
-                console.log('my profile pic1');
+  
             };
         });
     });
