@@ -96,11 +96,11 @@ $(document).ready(function(){
                 window.location.reload(true);
                 //on successful login, display user profile picture
                 function newprofilediv() {
-                var newprofilediv = $("<div id='mynewprofilediv'></div>");
-                var image = 'http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg';
-                    $('#FB').click(function () {
-                        $("#container").append('<div img url="http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg"</div>');
-                        console.log('my profile pic');
+                var image = authData.facebook.profileImageURL;
+                    $("#FB").click(function(){
+                    $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
+                    console.log('my profile pic1');
+                    });
                     });
                 };
         };
