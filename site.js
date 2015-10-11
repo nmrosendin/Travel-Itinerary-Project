@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     $("#submitButton").click(function(){
         console.log("hi");
-        window.location.href="travel_submit_itinerary.html"
+        window.location.href="Travel-Itinerary-Project/travel_submit_itinerary.html"
     });
 
     $("#myProfile").click(function(){
