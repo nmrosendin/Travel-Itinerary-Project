@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="site.js"></script>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/firebase.js"></script>
 	 <!-- <script src="site.js"></script> -->
 	<script src="./js/owl.js" charset="utf-8"></script>
 	<link rel="stylesheet" href="css/owl.css" media="screen" title="no title" charset="utf-8">
-
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
+	<script src="site.js"></script>
 	<title>Travelogue</title>
-
-	<style media="screen">
-	.item{
-		display: block;
-		border-width: medium;
-		width: 100%;
-		height: auto;
-		text-align: center;
-		text-decoration: none;
-		color: black;
-	}
-
-	.item img{
-		display: block;
-		width: 100%;
-		height: auto;
-		opacity: .4;
-	}
-	</style>
 
 </head>
 	<body>
@@ -58,55 +38,6 @@
 			</div>
 		</div>
 	</body>
-
-<script type="text/javascript">
-
-$('document').ready(function(){
-	// window.location = newUrl;
-	$("#1").click(function(){
-		window.location.href="Sanfrancisco_Full_Itinerary.html"
-	});
-
-	var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
-	//console.logs the information about destination.
-	function searchForDestination(destination) {
-		ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
-			// var data = snapshot.val();
-			document.location.href = './view_itinerary.html?' + destination;
-		});
-	}
-	//on submit, takes the value inside the search and uses it to get values
-	$('#searchBox').submit(function(e){
-		 e.preventDefault();
-		 var str = $('#search_location').val();
-		 console.log(str);
-		 searchForDestination(str)
-	});
-
-	ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
-		var data = snapshot.val();
-		console.log(data.photo);
-			// <div class="item"></></div>
-		$('#owl-demo').append('<a class="item" href="./view_itinerary.html?' + data.destination +  '"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></a>')
-	});
-
-	setTimeout(function() {
-		$("#owl-demo").owlCarousel({
-			autoPlay: false, //Set AutoPlay to 3 seconds
-			items : 4,
-			itemsDesktop : [1199,3],
-			itemsDesktopSmall : [979,3]
-		});
-	}, 800);
-
-
-	// var data = snapshot.val();
-	// console.log(snapshot.val);
-	// for (var i = 0; i < data.length; i++) {
-	// 	$('#owl-demo').append('<td>Destination: ' + data[i] + '<br> Date: '+ data[i] +'</td>' );
-	// }
-});
-	</script>
 
 <!-- Footer  -->
 <br><br><br><br><br><br><br>

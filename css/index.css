@@ -3,6 +3,22 @@
 	font-weight: lighter;
 }
 
+.item{
+		display: block;
+		border-width: medium;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		text-decoration: none;
+		color: black;
+	}
+
+	.item img{
+		display: block;
+		width: 100%;
+		height: auto;
+		opacity: .4;
+	}
 
 .homeHeader {
 	display: inline-block;
