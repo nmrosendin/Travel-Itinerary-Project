@@ -1,9 +1,8 @@
 $(document).ready(function(){
  console.log("hi");
-
     $("#submitButton").click(function(){
         console.log("hi");
-        window.location.href="travel_submit_itinerary.html"
+        window.location.href="Travel-Itinerary-Project/travel_submit_itinerary.html"
     });
 
     $("#myProfile").click(function(){
@@ -41,9 +40,7 @@ $(document).ready(function(){
         var data = snapshot.val();
         console.log(data.photo);
             // <div class="item"></></div>
-        var css="background-image:url('"+ data.photo +"');";
-        console.log(css);
-        $('#owl-demo').append("<a class='item' href='./view_itinerary.html?" + data.destination +  "'><div class='inner' style="+ css + ">" + data.destination + "</div></a>");
+        $('#owl-demo').append("<a class='item' href='./view_itinerary.html?" + data.destination +  "'><img src = '"+ data.photo +"'/><div class='inner'>" + data.destination + "</div></a>");
     });
 
     setTimeout(function() {
@@ -78,19 +75,13 @@ $(document).ready(function(){
             $("#FB").show();
             $('#myProfile').hide();
             $('#home').hide();
-            $('#submitButton').show();
+            $('#submitButton').hide();
 
         } else {
          //user is logged in
             console.log('loggedin');
             $("#logout").show();
             $("#FB").hide();
-            $('#home').hide();
-
-            var image = authData.facebook.profileImageURL;
-                console.log('testpic');
-            $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
-                console.log('my profile pic1');
         }
 
     $("#FB").click(function(){
@@ -101,24 +92,26 @@ $(document).ready(function(){
                 console.log("Authenticated successfully with payload:", authData);
                 window.location.reload(true);
                 //on successful login, display user profile picture
-                
-                // var image = authData.facebook.profileImageURL;
-                // $("#FB").click(function(){
-                //     console.log('testpic');
-                //     $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
-                //     console.log('my profile pic1');
-                // });
-            };
-        });
+                function newprofilediv() {
+                var newprofilediv = $("<div id='mynewprofilediv'></div>");
+                var image = 'http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg';
+                    $('#FB').click(function () {
+                        console.log('hi');
+                        $(".homeHeader").append(newprofilediv);
+                        $(newprofilediv).append(image);
+                    });
+                };
+        };
      });
 
-    $("#logout").click(function(){
-        console.log("logmeout");
-        ref.unauth();
-        window.location.href="index.html"
-        $("#logout").hide();
-        $("#FB").show();
-        $('#myProfile').hide();
-        $('#home').hide();
+        $("#logout").click(function(){
+            console.log("logmeout");
+            ref.unauth();
+            window.location.href="index.html"
+            $("#logout").hide();
+            $("#FB").show();
+            $('#myProfile').hide();
+            $('#home').hide();
+        });
     });
 });
