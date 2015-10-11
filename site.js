@@ -1,12 +1,6 @@
 $(document).ready(function(){
  console.log("hi");
 
- //test
-    $("#FB").click(function(){
-        $("#container").append('<div id="pro_div"><img id="img_div" src="facebook.profileImageURL" height="42" width="42"/></div>');
-        console.log('my profile pic1');
-     });
- //end test
     $("#submitButton").click(function(){
         console.log("hi");
         window.location.href="travel_submit_itinerary.html"
@@ -99,6 +93,7 @@ $(document).ready(function(){
                 
                 var image = authData.facebook.profileImageURL;
                 $("#FB").click(function(){
+                    console.log('testpic');
                     $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
                     console.log('my profile pic1');
                 });
