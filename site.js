@@ -81,7 +81,7 @@ $(document).ready(function(){
             $("#FB").hide();
             $('#home').hide();
         }
-
+        
     $("#FB").click(function(){
         var image = authData.facebook.profileImageURL;
         ref.authWithOAuthPopup("facebook", function(error, authData) {
