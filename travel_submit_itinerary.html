@@ -10,17 +10,43 @@
 
 </head>
 <body>
-<div class='homeHeader'>
-  <div id="button_header">
-    <button id='submitButton'>Submit an Itinerary</button>
-    <button id='myProfile'>My Profile</button>
-    <button id='home'>Home</button>
+  <div class="all">  
+    <div class='homeHeader'>
+      <div id="button_header">
+        <button id='submitButton' div class ="buttonhead">Submit an Itinerary</button>
+        <button id ='myProfile' div class ="buttonhead">My Profile</button>
+        <button id='home' div class ="buttonhead">Home</button>
+      </div>
+    </div>
   </div>
-</div>
 </head>
 
+<!-- Script for header button hoover -->
+ <script>
+  
+     var button = document.getElementsByClassName("buttonhead");
+    
+    for (var i=0; i<button.length; i++) { 
+
+      (function (showbutton) {
+        button[i].addEventListener("mouseover", function(e) {e.preventDefault();
+          button[showbutton].style.backgroundColor = "#006699";
+          button[showbutton].style.height = '40px';
+        }, 'false');
+        button[i].addEventListener("mouseout", function(e) {e.preventDefault();
+          button[showbutton].style.backgroundColor = "#34b3a0";
+          button[showbutton].style.height = '40px';
+
+        }, 'false');
+        button[i].addEventListener("click", function(e) {e.preventDefault();
+          alert ("Under construction...")}, 'false');
+    }) (i);
+    }
+ </script>
+
+<div id="travelblock">
   </form>
-<div id='submitBody'>
+ <div id='submitBody'>
   <h1>Submit Your Itinerary</h1>
   <div id="submit-form">
     <form onsubmit="return submitButton(this)">
@@ -69,6 +95,7 @@
       <input type="hidden" name="_next" value="//site.io/thanks.html">
     </form>
   </div>
+ </div>
 </div>
 
 <script>
@@ -114,6 +141,73 @@ function submitButton(formObj){
   });
 </script>
 
+<div id="googlemaps"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+ 
+// The latitude and longitude of city
+var position = [51.523180, -0.107133];
+ 
+function showGoogleMaps() {
+ 
+    var latLng = new google.maps.LatLng(position[0], position[1]);
+ 
+    var mapOptions = {
+        zoom: 16, // initialize zoom level - the max value is 21
+        streetViewControl: false, // hide the yellow Street View pegman
+        scaleControl: true, // allow users to zoom the Google Map
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: latLng
+    };
+ 
+    map = new google.maps.Map(document.getElementById('googlemaps'),
+        mapOptions);
+ 
+    // Show the default red marker at the location
+    marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+    });
+}
+ 
+google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+</script>
+
+<!-- footer -->
+  <div class="footerbox">
+   <div id="footer">
+      <nav class="group">
+      <ul id="primary-nav">
+
+     <li class="About">
+      <a href="about.html">
+      <span>About</span>
+      </a>
+
+      <li class="Facebook">
+      <a href="">
+      <span>Facebook</span>
+      </a>
+
+      </li>
+      <li class="Twitter">
+      <a href="">
+      <span>Twitter</span>
+      </a>
+      </li>
+      <li class="GitHub">
+      <a href="https://github.com/nmrosendin/Travel-Itinerary-Project">
+      <span>GitHub</span>
+      </a>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
 
 </body>
 </html>
