@@ -1,8 +1,15 @@
 $(document).ready(function(){
  console.log("hi");
+
+ //test
+    $("#FB").click(function(){
+        $("#container").append('<div id="pro_div"><img id="img_div" src="facebook.profileImageURL" height="42" width="42"/></div>');
+        console.log('my profile pic1');
+     });
+ //end test
     $("#submitButton").click(function(){
         console.log("hi");
-        window.location.href="Travel-Itinerary-Project/travel_submit_itinerary.html"
+        window.location.href="travel_submit_itinerary.html"
     });
 
     $("#myProfile").click(function(){
@@ -92,9 +99,8 @@ $(document).ready(function(){
                 var newprofilediv = $("<div id='mynewprofilediv'></div>");
                 var image = 'http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg';
                     $('#FB').click(function () {
-                        console.log('hi');
-                        $(".homeHeader").append(newprofilediv);
-                        $(newprofilediv).append(image);
+                        $("#container").append('<div img url="http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg"</div>');
+                        console.log('my profile pic');
                     });
                 };
         };
