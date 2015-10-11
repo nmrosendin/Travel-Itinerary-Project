@@ -78,13 +78,14 @@ $(document).ready(function(){
             $("#FB").show();
             $('#myProfile').hide();
             $('#home').hide();
-            $('#submitButton').hide();
+            $('#submitButton').show();
 
         } else {
          //user is logged in
             console.log('loggedin');
             $("#logout").show();
             $("#FB").hide();
+            $('#home').hide();
         }
 
     $("#FB").click(function(){
