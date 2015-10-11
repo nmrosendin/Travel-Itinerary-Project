@@ -96,26 +96,24 @@ $(document).ready(function(){
                 console.log("Authenticated successfully with payload:", authData);
                 window.location.reload(true);
                 //on successful login, display user profile picture
-                function newprofilediv() {
+                
                 var image = authData.facebook.profileImageURL;
-                    $("#FB").click(function(){
+                $("#FB").click(function(){
                     $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
                     console.log('my profile pic1');
-                    });
-                    });
-                };
-        };
+                });
+            };
+        });
      });
 
-        $("#logout").click(function(){
-            console.log("logmeout");
-            ref.unauth();
-            window.location.href="index.html"
-            $("#logout").hide();
-            $("#FB").show();
-            $('#myProfile').hide();
-            $('#home').hide();
-        });
+    $("#logout").click(function(){
+        console.log("logmeout");
+        ref.unauth();
+        window.location.href="index.html"
+        $("#logout").hide();
+        $("#FB").show();
+        $('#myProfile').hide();
+        $('#home').hide();
     });
 });
 
