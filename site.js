@@ -1,8 +1,9 @@
 $(document).ready(function(){
  console.log("hi");
+
     $("#submitButton").click(function(){
         console.log("hi");
-        window.location.href="Travel-Itinerary-Project/travel_submit_itinerary.html"
+        window.location.href="travel_submit_itinerary.html"
     });
 
     $("#myProfile").click(function(){
@@ -15,11 +16,7 @@ $(document).ready(function(){
         window.location.href="index.html"
     });
 
-// window.location = newUrl;
-    // $("#1").click(function(){
-    //     window.location.href="Sanfrancisco_Full_Itinerary.html"
-    // });
-
+//carousel
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
     //console.logs the information about destination.
     function searchForDestination(destination) {
@@ -33,7 +30,7 @@ $(document).ready(function(){
          e.preventDefault();
          var str = $('#search_location').val();
          console.log(str);
-         searchForDestination(str)
+         searchForDestination(str);
     });
 
     ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
@@ -75,13 +72,14 @@ $(document).ready(function(){
             $("#FB").show();
             $('#myProfile').hide();
             $('#home').hide();
-            $('#submitButton').hide();
+            $('#submitButton').show();
 
         } else {
          //user is logged in
             console.log('loggedin');
             $("#logout").show();
             $("#FB").hide();
+            $("#home".hide();
         }
 
     $("#FB").click(function(){
@@ -92,26 +90,21 @@ $(document).ready(function(){
                 console.log("Authenticated successfully with payload:", authData);
                 window.location.reload(true);
                 //on successful login, display user profile picture
-                function newprofilediv() {
-                var newprofilediv = $("<div id='mynewprofilediv'></div>");
-                var image = 'http://peanutonthetable.com/wp-content/uploads/2013/01/happy-puppy.jpg';
-                    $('#FB').click(function () {
-                        console.log('hi');
-                        $(".homeHeader").append(newprofilediv);
-                        $(newprofilediv).append(image);
-                    });
-                };
-        };
+                var image = authData.facebook.profileImageURL;
+                console.log('testpic');
+                $("#container").append('div id="pro_div"><img id="img_div" src="' + image + '"height="42" width="42"/></div>');
+                console.log('my profile pic1');
+            };
+        });
      });
 
-        $("#logout").click(function(){
-            console.log("logmeout");
-            ref.unauth();
-            window.location.href="index.html"
-            $("#logout").hide();
-            $("#FB").show();
-            $('#myProfile').hide();
-            $('#home').hide();
-        });
+    $("#logout").click(function(){
+        console.log("logmeout");
+        ref.unauth();
+        window.location.href="index.html"
+        $("#logout").hide();
+        $("#FB").show();
+        $('#myProfile').hide();
+        $('#home').hide();
     });
 });
