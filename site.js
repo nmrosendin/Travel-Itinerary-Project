@@ -40,7 +40,7 @@ $(document).ready(function(){
         var data = snapshot.val();
         console.log(data.photo);
             // <div class="item"></></div>
-        $('#owl-demo').append("<a class='item' href='./view_itinerary.html?" + data.destination +  "'><img src = '"+ data.photo +"'/><div class='inner'>" + data.destination + "</div></a>");
+        $('#owl-demo').append("<div class='item' href='./view_itinerary.html?" + data.destination +  "'><img src = '"+ data.photo +"'/><div class='inner'>" + data.destination + "</div></div>");
     });
 
     setTimeout(function() {
