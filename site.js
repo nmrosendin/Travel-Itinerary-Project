@@ -15,17 +15,13 @@ $(document).ready(function(){
         window.location.href="index.html"
     });
 
-// window.location = newUrl;
-    $("#1").click(function(){
-        window.location.href="Sanfrancisco_Full_Itinerary.html"
-    });
-
+// carousel
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
     //console.logs the information about destination.
     function searchForDestination(destination) {
         ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
             // var data = snapshot.val();
-            document.location.href = './view_itinerary.html?' + destination;
+            document.location.href = './view_itinerary.html?' + destination
         });
     }
     //on submit, takes the value inside the search and uses it to get values
@@ -33,14 +29,14 @@ $(document).ready(function(){
          e.preventDefault();
          var str = $('#search_location').val();
          console.log(str);
-         searchForDestination(str)
+         searchForDestination(str);
     });
 
     ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
         var data = snapshot.val();
         console.log(data.photo);
             // <div class="item"></></div>
-        $('#owl-demo').append('<a class="item" href="./view_itinerary.html?' + data.destination +  '"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></a>')
+        $('#owl-demo').append('<a class="item" href="./view_itinerary.html?' + data.destination +  '"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></a>');
     });
 
     setTimeout(function() {
