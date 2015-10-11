@@ -81,9 +81,8 @@ $(document).ready(function(){
             $("#FB").hide();
             $('#home').hide();
         }
-        
+
     $("#FB").click(function(){
-        var image = authData.facebook.profileImageURL;
         ref.authWithOAuthPopup("facebook", function(error, authData) {
             if (error) {
                 console.log("Login Failed!", error);
@@ -91,11 +90,12 @@ $(document).ready(function(){
                 console.log("Authenticated successfully with payload:", authData);
                 window.location.reload(true);
                 //on successful login, display user profile picture
+                var image = authData.facebook.profileImageURL;
                 console.log('testpic');
                 $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
                 console.log('my profile pic1');
-            });
-        };
+            };
+        });
     });
 
     $("#logout").click(function(){
