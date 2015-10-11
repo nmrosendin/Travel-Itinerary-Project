@@ -80,6 +80,11 @@ $(document).ready(function(){
             $("#logout").show();
             $("#FB").hide();
             $('#home').hide();
+
+            var image = authData.facebook.profileImageURL;
+                console.log('testpic');
+            $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
+                console.log('my profile pic1');
         }
 
     $("#FB").click(function(){
@@ -91,12 +96,12 @@ $(document).ready(function(){
                 window.location.reload(true);
                 //on successful login, display user profile picture
                 
-                var image = authData.facebook.profileImageURL;
-                $("#FB").click(function(){
-                    console.log('testpic');
-                    $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
-                    console.log('my profile pic1');
-                });
+                // var image = authData.facebook.profileImageURL;
+                // $("#FB").click(function(){
+                //     console.log('testpic');
+                //     $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
+                //     console.log('my profile pic1');
+                // });
             };
         });
      });
