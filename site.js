@@ -63,36 +63,45 @@ $(document).ready(function(){
     //     scope: "email,user_likes"
     // });
 
+    //user is logged in
+    function loggedin() {
+        console.log('loggedin');
+        $("#logout").show();
+        $("#FB").hide();
+        $('#home').hide();
+    }
+
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
     var user = ref.getAuth();
-        if (user==null) {
-        //user not logged in
-            console.log('notloggedin');
-            $("#logout").hide();
-            $("#FB").show();
-            $('#myProfile').hide();
-            $('#home').hide();
-            $('#submitButton').show();
+    console.log(user);
+    if (user==null) {
+    //user not logged in
+        console.log('notloggedin');
+        $("#logout").hide();
+        $("#FB").show();
+        $('#myProfile').hide();
+        $('#home').hide();
+        $('#submitButton').show();
 
-        } else {
-         //user is logged in
-            console.log('loggedin');
-            $("#logout").show();
-            $("#FB").hide();
-            $('#home').hide();
-        }
+    } else {
+      loggedin();
+    }
 
     $("#FB").click(function(){
         ref.authWithOAuthPopup("facebook", function(error, authData) {
+            console.log('loginactions');
             if (error) {
                 console.log("Login Failed!", error);
             } else {
                 console.log("Authenticated successfully with payload:", authData);
-                window.location.reload(true);
+                //window.location.reload(true);
                 //on successful login, display user profile picture
+                loggedin();
+
+
                 var image = authData.facebook.profileImageURL;
                 console.log('testpic');
-                $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
+                $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + image + '"/></div>');
                 console.log('my profile pic1');
             };
         });
