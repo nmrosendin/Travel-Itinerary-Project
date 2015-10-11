@@ -2,7 +2,7 @@ $(document).ready(function(){
  console.log("hi");
 
     $("#submitButton").click(function(){
-        console.log("hi");
+        console.log("hiii");
         window.location.href="travel_submit_itinerary.html"
     });
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
         var data = snapshot.val();
         console.log(data.photo);
             // <div class="item"></></div>
-        $('#owl-demo').append('<a class="item" href="./view_itinerary.html?' + data.destination +  '"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></a>');
+        $('#owl-demo').append("<div class='item' href='./view_itinerary.html?" + data.destination +  "'><img src = '"+ data.photo +"'/><div class='inner'>" + data.destination + "</div></div>");
     });
 
     setTimeout(function() {
@@ -48,7 +48,6 @@ $(document).ready(function(){
             itemsDesktopSmall : [979,3]
         });
     }, 800);
-
 
     // var data = snapshot.val();
     // console.log(snapshot.val);
@@ -117,4 +116,3 @@ $(document).ready(function(){
         $('#home').hide();
     });
 });
-

@@ -4,20 +4,26 @@
 }
 
 .item{
-		display: block;
-		border-width: medium;
-		width: 100%;
-		height: auto;
-		text-align: center;
-		text-decoration: none;
-		color: black;
+	height:300px;
+    width:300px;
+    position:relative;
 	}
 
+.inner{
+	z-index:100;
+	position:absolute;
+	color:white;
+	font-size:24px;
+	font-weight:bold;
+	left:150px;
+	top:80px;
+}
+
 	.item img{
-		display: block;
-		width: 100%;
-		height: auto;
-		opacity: .4;
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
 	}
 
 .homeHeader {
@@ -105,4 +111,8 @@ table {
 
 #footer a{
 	text-decoration: none;
+}
+
+info{
+	color:red;
 }
