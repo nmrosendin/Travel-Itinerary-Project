@@ -12,26 +12,33 @@
   <div class="all">  
     <div class='homeHeader'>
       <div id="button_header">
-        <button id='submitButton'>Submit an Itinerary</button>
-        <button id='myProfile'>My Profile</button>
-        <button id='home'>Home</button>
+        <button id='submitButton' div class ="buttonhead">Submit an Itinerary</button>
+        <button id ='myProfile' div class ="buttonhead">My Profile</button>
+        <button id='home' div class ="buttonhead">Home</button>
       </div>
     </div>
+  </div>
 
 <!-- Script for header button hoover -->
  <script>
-     var button = document.getElementById ("home");
-     // console.log(button);
+  
+     var button = document.getElementsByClassName("buttonhead");
     
     for (var i=0; i<button.length; i++) { 
+
       (function (showbutton) {
         button[i].addEventListener("mouseover", function(e) {e.preventDefault();
           button[showbutton].style.backgroundColor = "#006699";
-          button[showbutton].style.height = '550px';
+          button[showbutton].style.height = '40px';
         }, 'false');
         button[i].addEventListener("mouseout", function(e) {e.preventDefault();
-          button[showbutton].style.backgroundColor = "white";
-          button[showbutton].style.height = '550px';
+          button[showbutton].style.backgroundColor = "#34b3a0";
+          button[showbutton].style.height = '40px';
+
+        }, 'false');
+        button[i].addEventListener("click", function(e) {e.preventDefault();
+          alert ("Under construction...")}, 'false');
+    }) (i);
     }
  </script>
 
@@ -40,12 +47,7 @@
 <!-- Google map test -->
 <div id="googlemaps"></div>
 <div id="textbox">
-  <!-- You can even embed a Google Form here -->
 
-  <!-- <div id="aboutSection">
-        <h1 id="aboutHeader">How it works</h1>
-        <p id="aboutPara">"Travelogue started as a class project in a Hackbright Academy "</p>
-  </div> -->
 
   <div id="aboutSection">
         <h1 id="aboutHeader">About</h1>
