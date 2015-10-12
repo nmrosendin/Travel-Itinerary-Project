@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     setTimeout(function() {
         $("#owl-demo").owlCarousel({
-            autoPlay: false, //Set AutoPlay to 3 seconds
+            autoPlay: 2000, //Set AutoPlay to 3 seconds
             items : 4,
             itemsDesktop : [1199,3],
             itemsDesktopSmall : [979,3]
@@ -67,7 +67,7 @@ $(document).ready(function(){
         console.log('loggedin');
         $("#logout").show();
         $("#FB").hide();
-        $('#home').hide();
+        $('#home').show();
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
         console.log('my profile pic1');        

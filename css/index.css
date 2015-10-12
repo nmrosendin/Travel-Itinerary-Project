@@ -3,6 +3,19 @@
 	font-weight: lighter;
 }
 
+#homepic {
+	background-image: url("homepage.png");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 450px;
+}
+
+#homepic img {
+	width: 100px;
+	height: 100px;
+}
+
 .item{
 	height:300px;
     width:300px;
@@ -41,9 +54,18 @@
 	width: 100%;
 }
 
+h1 {
+	text-align: center;
+	font-size: 42px;
+	color: grey;
+}
+
 #landingHeader {
 	margin-top: 80px;
 	text-align: center;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
 }
 
 #submitButton, #myProfile, #home {
@@ -72,6 +94,8 @@ thead {
 #exploreHeader {
 	text-align: center;
 	margin-top: 30px;
+	font-size: 34px;
+    color: grey;
 }
 
 #explore {

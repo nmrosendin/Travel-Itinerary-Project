@@ -13,22 +13,28 @@
 
 </head>
 	<body>
-		<div class='homeHeader'>
-			<div id="button_header">
-				<button id='submitButton'>Submit an Itinerary!</button>
-				<button id='myProfile'>My Profile</button>
-				<button id='home'>Home</button>
-				<button id='FB'>Login with Facebook</button>
-				<button id='logout'>Logout</button>
+
+		<div id='homepic'>
+
+			<div class='homeHeader'>
+				<div id="button_header">
+					<button id='submitButton'>Submit an Itinerary!</button>
+					<button id='myProfile'>My Profile</button>
+					<button id='home'>Home</button>
+					<button id='FB'>Login with Facebook</button>
+					<button id='logout'>Logout</button>
+				</div>
 			</div>
+
+			<div id="homeTitle">
+				<h1 id='landingHeader'>Where do you want to go?</h1>
+			</div>
+			<form id="searchBox">
+				<input placeholder='Enter Destination' type=text id='search_location' name='name'>
+				<button id='search_submit'>Search</button>
+			</form>
 		</div>
-		<div id="homeTitle">
-			<h1 id='landingHeader'>Where do you want to go?</h1>
-		</div>
-		<form id="searchBox">
-			<input placeholder='Enter Destination' type=text id='search_location' name='name'>
-			<button id='search_submit'>Search</button>
-		</form>
+
 		<div id='Explore'>
 			<div>
 				<h3 id='exploreHeader'>Explore</h3>
@@ -37,10 +43,11 @@
 			    </div>
 			</div>
 		</div>
+		</div>
+	
 	</body>
 
 <!-- Footer  -->
-<br><br><br><br><br><br><br>
 <div id="footer">
   <nav class="group">
   <ul id="primary-nav">
