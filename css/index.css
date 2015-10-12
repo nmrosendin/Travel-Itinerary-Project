@@ -102,6 +102,10 @@ thead {
 	margin-top: 50px;
 }
 
+#viewall {
+	text-decoration: none;
+}
+
 
 tr {
 	text-align: center;

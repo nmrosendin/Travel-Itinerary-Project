@@ -19,18 +19,23 @@ $(document).ready(function(){
 // carousel
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
     //console.logs the information about destination.
-    function searchForDestination(destination) {
+    function seeAll(destination) {
         ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
             // var data = snapshot.val();
             document.location.href = './view_itinerary.html?' + destination
         });
     }
     //on submit, takes the value inside the search and uses it to get values
-    $('#searchBox').submit(function(e){
-         e.preventDefault();
-         var str = $('#search_location').val();
-         console.log(str);
-         searchForDestination(str);
+        //Nicole to put new code and reuse whats below
+
+    //See all button takes you to see all itineraries
+    $('#seeAll').click(function(){ //@Jamie give the "see all" button this "seeAll" id 
+         document.location.href = 'viewall.html?'
+         console.log('hi');
+         // e.preventDefault();
+         // var str = $('#search_location').val();
+         // console.log(str);
+         // seeAll(str);
     });
 
     ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
