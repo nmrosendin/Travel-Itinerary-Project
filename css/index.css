@@ -114,12 +114,21 @@ thead {
 	width: 100%;
 }
 
-#exploreHeader, #destinationheader {
+#exploreHeader {
 	text-align: center;
 	margin-top: 30px;
 	font-size: 34px;
     color: grey;
     margin-bottom: 5px;
+}
+
+
+#destinationheader, #destinationphoto {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 34px;
+    color: grey;
+    margin-bottom: 15px;
 }
 
 #exploreSubHead {
@@ -173,6 +182,10 @@ table {
 .images {
 	height: 150px;
 	width: 150px;
+}
+
+.photocontainer {
+	text-align: center;
 }
 
 /*footer*/
@@ -233,4 +246,12 @@ table {
 	text-decoration: none;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 200;
+}
+
+#aboutfooter {
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	margin-top: 50px;
+	padding-top: 50px;
 }
