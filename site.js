@@ -62,37 +62,48 @@ $(document).ready(function(){
     //     scope: "email,user_likes"
     // });
 
+    //user is logged in
+    function loggedin(imageUrl) {
+        console.log('loggedin');
+        $("#logout").show();
+        $("#FB").hide();
+        $('#home').hide();
+        console.log('testpic');
+        $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
+        console.log('my profile pic1');        
+    }
+
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
     var user = ref.getAuth();
-        if (user==null) {
-        //user not logged in
-            console.log('notloggedin');
-            $("#logout").hide();
-            $("#FB").show();
-            $('#myProfile').hide();
-            $('#home').hide();
-            $('#submitButton').show();
+    console.log(user);
+    if (user==null) {
+    //user not logged in
+        console.log('notloggedin');
+        $("#logout").hide();
+        $("#FB").show();
+        $('#myProfile').hide();
+        $('#home').hide();
+        $('#submitButton').show();
 
-        } else {
-         //user is logged in
-            console.log('loggedin');
-            $("#logout").show();
-            $("#FB").hide();
-            $('#home').hide();
-        }
+    } else {
+      var info = user.uid.split(":")
+      var id = info[1];  
+      loggedin("https://graph.facebook.com/" + id + "/picture");
+    }
 
     $("#FB").click(function(){
         ref.authWithOAuthPopup("facebook", function(error, authData) {
+            console.log('loginactions');
             if (error) {
                 console.log("Login Failed!", error);
             } else {
                 console.log("Authenticated successfully with payload:", authData);
-                window.location.reload(true);
+                //window.location.reload(true);
                 //on successful login, display user profile picture
-                var image = authData.facebook.profileImageURL;
-                console.log('testpic');
-                $("#container").append('<div id="pro_div"><img id="img_div" src="' + image + '" height="42" width="42"/></div>');
-                console.log('my profile pic1');
+                loggedin(authData.facebook.profileImageURL);
+
+
+  
             };
         });
     });
