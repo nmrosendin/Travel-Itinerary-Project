@@ -24,7 +24,7 @@
 
 h1, h2, #tips, #depart, #resultsdestination, #itineraryDescription {
 	display: inline-block;
-	width: 100%;
+	width: 50%;
 	text-align: center;
 }
 
