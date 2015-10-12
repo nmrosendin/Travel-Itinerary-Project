@@ -68,10 +68,16 @@ h1 {
 	width: 100%;
 }
 
-#submitButton, #myProfile, #home {
+#submitButton, #myProfile, #home, #FB, #logout {
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
+	border-style: solid #34b3a0;
+	border: 2.5px solid #000;
+    border-color: #34b3a0;
+    background-color: white;
+	font-size: 14px;
+	color: grey;
 }
 
 #searchBox {
@@ -104,6 +110,30 @@ thead {
 
 #viewall {
 	text-decoration: none;
+}
+
+.seeAllButton {
+	display: inline-block;
+	width: 100%;
+}
+
+#seeAllButtonDiv {
+	display: inline-flex;
+	margin-right: 46%;
+	margin-left: 46%;
+	margin-bottom: 15px;
+}
+
+#seeAll {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 10px 10px 10px;
+	border-style: solid #34b3a0;
+	border: 2.5px solid #000;
+    border-color: #34b3a0;
+    background-color: white;
+    font-size: 14px;
+    color: grey;
 }
 
 
