@@ -102,6 +102,14 @@ thead {
 	margin-top: 30px;
 	font-size: 34px;
     color: grey;
+    margin-bottom: -10px;
+}
+
+#exploreSubHead {
+	text-align: center;
+	font-size: 20px;
+    color: grey;
+    margin-bottom: 20px;
 }
 
 #explore {
