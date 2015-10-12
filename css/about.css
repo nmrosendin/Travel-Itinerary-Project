@@ -18,44 +18,6 @@ html, body {
   display: block;
 }
 
-/*  page-specific css*/
-
-#homepic {
-	background-image: url("homepage.png");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 450px;
-}
-
-#homepic img {
-	width: 100px;
-	height: 100px;
-}
-
-.item{
-	height:300px;
-    width:300px;
-    position:relative;
-	}
-
-.inner{
-	z-index:100;
-	position:absolute;
-	color:white;
-	font-size:24px;
-	font-weight:bold;
-	left:150px;
-	top:80px;
-}
-
-	.item img{
-		position:absolute;
-		left:0;
-		top:0;
-		width:100%;
-	}
-
 .homeHeader {
 	display: inline-block;
 	width: 100%;
@@ -69,12 +31,6 @@ html, body {
 #hometitle {
 	display: inline-block;
 	width: 100%;
-}
-
-h1 {
-	text-align: center;
-	font-size: 42px;
-	color: grey;
 }
 
 #landingHeader {

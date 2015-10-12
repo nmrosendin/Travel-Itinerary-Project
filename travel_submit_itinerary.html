@@ -24,6 +24,7 @@
   </head>
 
   <body>
+<div id='backgroundpic'>
 
 <!-- Script for header button hoover -->
  <script>
@@ -38,7 +39,7 @@
           button[showbutton].style.height = '40px';
         }, 'false');
         button[i].addEventListener("mouseout", function(e) {e.preventDefault();
-          button[showbutton].style.backgroundColor = "#34b3a0";
+          button[showbutton].style.backgroundColor = "white";
           button[showbutton].style.height = '40px';
 
         }, 'false');
@@ -101,6 +102,8 @@
   </div>
  </div>
 </div>
+</div> <!-- div for whole page and links to id background pic -->
+
 
 <script>
 var myFirebaseRef = new Firebase ("https://amber-heat-5381.firebaseio.com");
@@ -145,6 +148,8 @@ function submitButton(formObj){
   });
 </script>
 
+
+
 <!-- <div id="googlemaps"></div>
 
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -181,37 +186,28 @@ google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 </script>
  -->
 <!-- footer -->
-  <div class="footerbox">
-   <div id="footer">
-      <nav class="group">
-      <ul id="primary-nav">
+<footer class="site-footer">
+ <div class="footerbox">
+          <div id="footerright">
+            <div>
+            <a href="[full link to your Twitter]">
+            <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" width="35" height="35" />
+            </a>
+            <a href="[full link to your LinkedIn]">
+            <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin1.png" width="35" height="35" />
+            </a>
+            <a href="[full link to your Facebook page]">
+            <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook1.png" width="35" height="35" />
+            </a>
+            <a href="pinterestaddress">
+            <img title="Pinterest" alt="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest1.png" width="35" height="35" />
+            </a>
+            </div>
+          </div>
+</div>
+</div>
 
-     <li class="About">
-      <a href="about.html">
-      <span>About</span>
-      </a>
+ </div>
 
-      <li class="Facebook">
-      <a href="">
-      <span>Facebook</span>
-      </a>
-
-      </li>
-      <li class="Twitter">
-      <a href="">
-      <span>Twitter</span>
-      </a>
-      </li>
-      <li class="GitHub">
-      <a href="https://github.com/nmrosendin/Travel-Itinerary-Project">
-      <span>GitHub</span>
-      </a>
-      </ul>
-    </div>
-  </div>
-
-</body>
 </html>
 
-</body>
-</html>
