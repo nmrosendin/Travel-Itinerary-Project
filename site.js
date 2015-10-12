@@ -25,11 +25,16 @@ $(document).ready(function(){
             document.location.href = './view_itinerary.html?' + destination
         });
     }
-    //on submit, takes the value inside the search and uses it to get values
-        //Nicole to put new code and reuse whats below
 
     //See all button takes you to see all itineraries
-    $('#seeAll').click(function(){ //@Jamie give the "see all" button this "seeAll" id 
+    $('#seeAll').click(function(){ 
+         document.location.href = 'viewall.html?'
+         console.log('hi');
+    });
+
+
+    //on submit, takes the value inside the search and uses it to get values
+    $('#seeAll').click(function(){ 
          document.location.href = 'viewall.html?'
          console.log('hi');
          // e.preventDefault();
