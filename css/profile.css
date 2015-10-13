@@ -1,14 +1,76 @@
 * {
 	font-family: Lato;
+	font-weight: lighter;
+  margin: 0;
 }
 
+body, html {
+	height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  position: relative;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+/*
+header css
+*/
+.homeHeader {
+	display: inline-block;
+	width: 100%;
+	background-color: white;
+	margin-bottom: -35px;
+}
+
+#button_header {
+	display: inline-flex;
+	float: right;
+}
+
+#hometitle {
+	display: inline-block;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+	font-size: 42px;
+	color: grey;
+}
+
+#submitButton, #myProfile, #home, #FB, #logout {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 10px 10px 10px;
+	border-style: solid #34b3a0;
+	border: 2.5px solid #000;
+    border-color: #34b3a0;
+    background-color: white;
+	font-size: 14px;
+	color: grey;
+}
+
+#hometitle, h1 {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+/*   end header css*/
+
 #profileheader {
-	margin-top: 20px;
+	margin-top: 35px;
 	margin-bottom: 20px;
 	height: 200px;
 	width: 100%;
     position: absolute;
-    background-image: url("158H.jpg");
+    background-image: url("llama.jpeg");
     background-repeat: no-repeat;
     text-align: center;
 }
@@ -17,7 +79,8 @@
 #avatarname {
 	width: 150px;
     display: inline-block;
-    margin-top: 114px;
+    margin-top: 134px;
+
 }
 
 #kittens {
@@ -49,4 +112,40 @@
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
+}
+
+/*//footer */
+#footer { text-align: center; }
+#footer ul { list-style: none; }
+#footer ul li { display: inline; }
+
+.footerbox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  background-color: white;
+  width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 100%;
+    word-spacing: 20px;
+    bottom:0;
+    height: 3em;
+    z-index: 1;
+  	opacity: .65;  Set the opacity for a slightly transparent Google Form 
+  	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-style: bold;
+	color: black;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+#footerright a {
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	bottom:0;
 }
