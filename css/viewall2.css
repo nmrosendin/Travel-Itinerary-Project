@@ -1,0 +1,92 @@
+<style>
+
+/*Heading */
+.homeHeader {
+  display: inline-block;
+  width: 100%;
+}
+
+#button_header {
+  display: inline-flex;
+  float: right;
+}
+
+#hometitle {
+  display: inline-block;
+  width: 100%;
+  
+ }
+
+#submitButton, #myProfile, #home, #FB, #logout {
+  display: inline-block;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10px;
+  border-style: solid #34b3a0;
+  border: 2.5px solid #000;
+    border-color: #34b3a0;
+    background-color: white;
+  font-size: 14px;
+  color: grey;
+}
+
+.card {
+  
+}
+
+
+/*
+
+footer*/
+
+#footerright { 
+  /*float: right;*/
+  margin-right: 3%;
+  padding-top: 10px;
+}
+
+#footerright a {
+  text-decoration: none;
+}
+
+#footerabout {
+  border-bottom-style: solid;
+  text-align: left;
+  word-spacing: .5em;
+}
+
+.site-footer, .page-wrap:after {
+   height: 142px; 
+  /*position: fixed;*/
+/*  box-sizing: border-box;*/
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10px;
+  bottom: 0;
+  left: 0;
+  /*height: 50px;*/
+  background-color: white;
+  /*border-top: solid #e6e7e8;*/
+  width: 100%;
+/*  z-index: 1;*/
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 100%;
+    word-spacing: 20px;
+   /* bottom:0;*/
+    /*height: 3em;*/
+    font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-style: bold;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  font-size: 16px;
+}
+
+#footer a {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+}
+
+
+</style>
