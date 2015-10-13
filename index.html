@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<script src="./js/jquery.js"></script>
@@ -20,13 +20,15 @@
 		<div id='homepic'>
 
 			<div class='homeHeader'>
-				<div id="button_header">
-					<button id='submitButton' div class ="buttonhead">Submit an Itinerary!</button>
-					<button id='myProfile' div class ="buttonhead">My Profile</button>
-					<button id='home' div class ="buttonhead">Home</button>
-					<button id='FB' div class ="buttonhead">Login with Facebook</button>
-					<button id='logout' div class ="buttonhead">Logout</button>
-				</div>
+				<div class='homeHeader'>
+			        <div id="button_header">
+			          <button id='submitButton' class='buttonhead'>Submit an Itinerary</button>
+			          <button id='myProfile' class='buttonhead'>My Profile</button>
+			          <button id='home' class='buttonhead'>Home</button>
+			          <button id='FB' class='buttonhead'>Login with Facebook</button>
+			          <button id='logout' class='buttonhead'>Logout</button>
+			        </div>
+			     </div>
 			</div>
 
 			<div id="homeTitle">
@@ -34,7 +36,7 @@
 			</div>
 			<form id="searchBox">
 				<input placeholder='Enter Destination' type=text id='search_location' name='name'>
-				<button id='search_submit'>Search</button>
+				<div id='search_submit'></div>
 			</form>
 		</div>
 
@@ -45,7 +47,7 @@
 				<!-- <button id="seeAll">See all</button> -->
 				<div class='seeAllButton'>
 					<div id="seeAllButtonDiv">
-						<button id="seeAll" href="viewall.html" div class ="buttonhead">See all</button>
+						<button id="see_All" href="viewall.html">See all</button>
 					</div>
 				</div>
 				<div id="owl-demo" class="owl-carousel" style="height:auto;">
@@ -82,21 +84,25 @@
 
 <!--   Script for button hovers -->
 <script>
+	$("#search_location").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#search_submit").click();
+    }
+	});
 
      var button = document.getElementsByClassName("buttonhead");
 
     for (var i=0; i<button.length; i++) {
       (function (showbutton) {
-        button[i].addEventListener("mouseover", function(e) {e.preventDefault();
-          button[showbutton].style.backgroundColor = "#34b3a0";
-          button[showbutton].style.height = '40px';
+       button[i].addEventListener("mouseover", function(e) {e.preventDefault();
+          button[showbutton].style.backgroundColor = "white";
+
         }, 'false');
         button[i].addEventListener("mouseout", function(e) {e.preventDefault();
           button[showbutton].style.backgroundColor = "white";
-          button[showbutton].style.height = '40px';
+
+
         }, 'false');
-        button[i].addEventListener("click", function(e) {e.preventDefault();
-          alert ("Under construction...")}, 'false');
     }) (i);
     }
  </script>
@@ -120,7 +126,7 @@
             </a>
             </div>
           </div>
-          <a href id="aboutfooter"="about.html">About</a>
+          <a href="about.html" id="aboutfooter">About</a>
 </div>
 </div>
 

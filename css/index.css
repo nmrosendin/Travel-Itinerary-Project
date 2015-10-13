@@ -86,16 +86,19 @@ h1 {
 	width: 100%;
 }
 
-#submitButton, #myProfile, #home, #FB, #logout {
+#submitButton, #search_location, #see_All, #myProfile, #home, #FB, #logout {
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
-	padding: 10px 10px 10px 10px;
+	padding: 9px 10px 9px 10px;
 	border-style: solid #34b3a0;
-	border: 2.5px solid #000;
+	border: 1.5px solid #000;
     border-color: #34b3a0;
     background-color: white;
+    opacity: .65;
 	font-size: 14px;
-	color: grey;
+	color: #34b3a0;
+	border-radius: 5px;
+	font-size: 12px;
 }
 
 #searchBox {

@@ -5,7 +5,8 @@
     <link rel="stylesheet" type="text/css" href="css/about.css"/>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Muli"/>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-    <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"</script>
+    <script src="site.js"></script>
 </head>
 
   <div class="page-wrap">
@@ -13,11 +14,13 @@
 
   <div class="all">  
     <div class='homeHeader'>
-      <div id="button_header">
-        <button id='submitButton' div class ="buttonhead">Submit an Itinerary</button>
-        <button id ='myProfile' div class ="buttonhead">My Profile</button>
-        <button id='home' div class ="buttonhead">Home</button>
-      </div>
+        <div id="button_header">
+          <button id='submitButton'>Submit an Itinerary!</button>
+          <button id='myProfile'>My Profile</button>
+          <button id='home'>Home</button>
+          <button id='FB'>Login with Facebook</button>
+          <button id='logout'>Logout</button>
+        </div>
     </div>
   </div>
  
@@ -25,13 +28,13 @@
 <!-- Script for header button hoover -->
  <script>
   
-     var button = document.getElementsByClassName("buttonhead");
+     var button = document.getElementById("buttonheader");
     
     for (var i=0; i<button.length; i++) { 
 
       (function (showbutton) {
         button[i].addEventListener("mouseover", function(e) {e.preventDefault();
-          button[showbutton].style.backgroundColor = "#006699";
+          button[showbutton].style.backgroundColor = "#9AD9D0";
           button[showbutton].style.height = '40px';
         }, 'false');
         button[i].addEventListener("mouseout", function(e) {e.preventDefault();
