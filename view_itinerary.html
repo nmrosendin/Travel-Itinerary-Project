@@ -10,14 +10,15 @@
     <script src="site.js"></script>
 </head>
 <body>
-<div class="all">
-  <div class='homeHeader'>
-    <div id="button_header">
-      <button id='submitButton'>Submit an Itinerary</button>
-      <button id='myProfile'>My Profile</button>
-      <button id='home'>Home</button>
-    </div>
-  </div>
+<div class='homeHeader'>
+        <div id="button_header">
+          <button id='submitButton'>Submit an Itinerary!</button>
+          <button id='myProfile'>My Profile</button>
+          <button id='home'>Home</button>
+          <button id='FB'>Login with Facebook</button>
+          <button id='logout'>Logout</button>
+        </div>
+</div>
 
   <!-- Page specific code -->
 
@@ -132,7 +133,7 @@ html, body {
               var data = snapshot.val();
 
               var results_itin = (
-              "<div id='resultsdestination'>" + data.destination + "</div>" +
+              "<div id='resultsdestination'>" + "Search Results for " + data.destination + "</div>" +
               "<img id='photoinner' src = '"+ data.photo +"'/><div>" +
               "<div id='info'>" + data.tips + "</p>" +
               "<div>" +
