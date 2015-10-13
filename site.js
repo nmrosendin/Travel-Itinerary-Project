@@ -75,14 +75,14 @@ $(document).ready(function(){
           searchForDestination(str)
      });
 
-     ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
-         var data = snapshot.val();
-         console.log(data.photo);
-             // <div class="item"></></div>
-         var css="background-image:url('"+ data.photo +"');";
-         console.log(css);
-         $('#owl-demo').append("<a class='item' href='./view_itinerary.html?" + data.destination +  "'><div class='inner' style="+ css + ">" + data.destination + "</div></a>");
-     });
+    //  ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
+    //      var data = snapshot.val();
+    //      console.log(data.photo);
+    //          // <div class="item"></></div>
+    //      var css="background-image:url('"+ data.photo +"');";
+    //      console.log(css);
+    //      $('#owl-demo').append("<a class='item' href='./view_itinerary.html?" + data.destination +  "'><div class='inner' style="+ css + ">" + data.destination + "</div></a>");
+    //  });
 
     //user is logged in
     function loggedin(imageUrl) {
