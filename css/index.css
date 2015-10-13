@@ -11,7 +11,7 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px; 
+  margin-bottom: -142px;
 }
 .page-wrap:after {
   content: "";
@@ -34,8 +34,8 @@ html, body {
 }
 
 .item{
-	height:300px;
-    width:300px;
+	max-height:300px;
+    width:auto;
     position:relative;
 	}
 
@@ -54,6 +54,7 @@ html, body {
 		left:0;
 		top:0;
 		width:100%;
+		max-height: 169px;
 	}
 
 .homeHeader {
@@ -190,7 +191,7 @@ table {
 
 /*footer*/
 
-#footerright { 
+#footerright {
 	/*float: right;*/
 	margin-right: 3%;
 	padding-top: 10px;
@@ -208,14 +209,14 @@ table {
 
 
 /*.site-footer, .page-wrap:after {
-  height: 142px; 
+  height: 142px;
 }
 */
 /*#footer ul { list-style: none; }
 #footer ul li { display: inline; }
 */
 .site-footer, .page-wrap:after {
-	 height: 142px; 
+	 height: 142px;
   /*position: fixed;*/
 /*  box-sizing: border-box;*/
   margin: 5px 5px 5px 5px;
