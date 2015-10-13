@@ -47,7 +47,7 @@ $(document).ready(function(){
         var data = snapshot.val();
         console.log(data.photo);
             // <div class="item"></></div>
-        $('#owl-demo').append("<div class='item'><a href='./view_itinerary.html2?" + data.destination +  "'><img src = '"+ data.photo +"'/><div class='inner'>" + data.destination + "</div></a></div>");
+        $('#owl-demo').append("<div class='item'><a href='./view_itinerary2.html?" + data.destination +  "'><img src = '"+ data.photo +"'/><div class='inner'>" + data.destination + "</div></a></div>");
     });
 
     setTimeout(function() {
@@ -64,7 +64,7 @@ $(document).ready(function(){
      function searchForDestination(destination) {
          ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
              // var data = snapshot.val();
-             document.location.href = './view_itinerary.html?' + destination;
+             document.location.href = './view_itinerary2.html?' + destination;
          });
      }
      //on submit, takes the value inside the search and uses it to get values
