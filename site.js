@@ -33,7 +33,7 @@ $(document).ready(function(){
     });
 
 
-    //on submit, takes the value inside the search and uses it to get values
+    //see all takes you to view all
     $('#seeAll').click(function(){
          document.location.href = 'viewall.html?'
          console.log('hi');
@@ -64,7 +64,7 @@ $(document).ready(function(){
      function searchForDestination(destination) {
          ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
              // var data = snapshot.val();
-             document.location.href = './view_itinerary2.html?' + destination;
+             document.location.href = './view_itinerary.html?' + destination;
          });
      }
      //on submit, takes the value inside the search and uses it to get values
