@@ -27,14 +27,14 @@ $(document).ready(function(){
     }
 
     //See all button takes you to see all itineraries
-    $('#seeAll').click(function(){ 
+    $('#seeAll').click(function(){
          document.location.href = 'viewall.html?'
          console.log('hi');
     });
 
 
     //on submit, takes the value inside the search and uses it to get values
-    $('#seeAll').click(function(){ 
+    $('#seeAll').click(function(){
          document.location.href = 'viewall.html?'
          console.log('hi');
          // e.preventDefault();
@@ -59,18 +59,30 @@ $(document).ready(function(){
         });
     }, 800);
 
-    // var data = snapshot.val();
-    // console.log(snapshot.val);
-    // for (var i = 0; i < data.length; i++) {
-    //  $('#owl-demo').append('<td>Destination: ' + data[i] + '<br> Date: '+ data[i] +'</td>' );
-    // }
+    var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
+     //console.logs the information about destination.
+     function searchForDestination(destination) {
+         ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
+             // var data = snapshot.val();
+             document.location.href = './view_itinerary.html?' + destination;
+         });
+     }
+     //on submit, takes the value inside the search and uses it to get values
+     $('#searchBox').submit(function(e){
+          e.preventDefault();
+          var str = $('#search_location').val();
+          console.log(str);
+          searchForDestination(str)
+     });
 
-// var str = $('#search_submit').val();
-    // var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
-    // ref.authWithOAuthPopup("facebook", function(error, authData) { d93713f82b19709de0f521137e0cab03 }, {
-    //     remember: "sessionOnly",
-    //     scope: "email,user_likes"
-    // });
+     ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
+         var data = snapshot.val();
+         console.log(data.photo);
+             // <div class="item"></></div>
+         var css="background-image:url('"+ data.photo +"');";
+         console.log(css);
+         $('#owl-demo').append("<a class='item' href='./view_itinerary.html?" + data.destination +  "'><div class='inner' style="+ css + ">" + data.destination + "</div></a>");
+     });
 
     //user is logged in
     function loggedin(imageUrl) {
@@ -80,7 +92,7 @@ $(document).ready(function(){
         $('#home').show();
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
-        console.log('my profile pic1');        
+        console.log('my profile pic1');
     }
 
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
@@ -97,7 +109,7 @@ $(document).ready(function(){
 
     } else {
       var info = user.uid.split(":")
-      var id = info[1];  
+      var id = info[1];
       loggedin("https://graph.facebook.com/" + id + "/picture");
     }
 
@@ -113,7 +125,7 @@ $(document).ready(function(){
                 loggedin(authData.facebook.profileImageURL);
 
 
-  
+
             };
         });
     });
