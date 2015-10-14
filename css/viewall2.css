@@ -1,10 +1,10 @@
 /*// notes:
-I don't know why the caption div changes sizes.  
-You can see what I'm talking about in inspect element. 
-I want all of the titles to line up. 
+I don't know why the caption div changes sizes.
+You can see what I'm talking about in inspect element.
+I want all of the titles to line up.
 
-The "dates" class isn't picking up styling.  It was originally date 
-and I changed it to dates to match the html but it still isn't working. 
+The "dates" class isn't picking up styling.  It was originally date
+and I changed it to dates to match the html but it still isn't working.
 */
 
 <style>
@@ -34,6 +34,9 @@ and I changed it to dates to match the html but it still isn't working.
 
  }
 
+ .hotelbutton{
+    height:30px;
+}
 #submitButton, #myProfile, #home, #FB, #logout {
   display: inline-block;
   margin: 5px 5px 5px 5px;
