@@ -18,7 +18,7 @@
 #hometitle {
   display: inline-block;
   width: 100%;
-  
+
  }
 
 #submitButton, #myProfile, #home, #FB, #logout {
@@ -43,27 +43,31 @@
   margin-top: 130px;
   margin-bottom: 130px;
   width: 100%;
-  height: 100px;
+  height: 316px;
 }
 
 .card img {
   float: left;
   max-width: 500px;
-  max-height: 500px;
+  max-height: 280px;
+  padding-left: 20px;
 }
 
 .caption {
-  float: right;
-  margin: 20px;
-  padding: 10px;
-  border-style: solid;
+font-size: 40px;
+   float: right;
+   margin-top: -7px;
+   margin-right: 14px;
+   padding: -7px;
+   padding-left: 71px;
 }
 
 .activity {
+    max-width: 424px;
+    padding-top: 32px;
     float: right;
-  margin: 20px;
-  padding: 10px;
-  border-style: solid;
+    padding: -9px;
+    border: 2px solid black;
 }
 
 
@@ -90,7 +94,7 @@ footer*/
     bottom:0;
     height: 3em;
     z-index: 1;
-    opacity: .65;  Set the opacity for a slightly transparent Google Form 
+    opacity: .65;  Set the opacity for a slightly transparent Google Form
     font-family: 'Raleway', sans-serif;
   font-weight: 200;
   font-style: bold;

@@ -27,16 +27,16 @@ $(document).ready(function(){
     }
 
     //See all button takes you to see all itineraries
-    $('#seeAll').click(function(){
-         document.location.href = 'viewall.html?'
+    $('#see_All').click(function(){
+         document.location.href = 'viewall.html'
          console.log('hi');
     });
 
 
     //on submit, takes the value inside the search and uses it to get values
-    $('#seeAll').click(function(){
-         document.location.href = 'viewall.html?'
-         console.log('hi');
+    $('#see_All').click(function(){
+         document.location.href = 'viewall.html'
+         console.log('HEY');
          // e.preventDefault();
          // var str = $('#search_location').val();
          // console.log(str);

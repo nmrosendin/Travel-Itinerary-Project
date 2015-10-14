@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
     <script src="./js/owl.js" charset="utf-8"></script>
-    <script src="viewall.js"></script>
+    <!-- <script src="viewall.js"></script> -->
 </head>
 
   <body>
@@ -25,12 +25,12 @@
       </div>
 </div>
 
- 
+
 <script>
-  
+
      var button = document.getElementsByClassName("buttonhead");
-    
-    for (var i=0; i<button.length; i++) { 
+
+    for (var i=0; i<button.length; i++) {
 
       (function (showbutton) {
         button[i].addEventListener("mouseover", function(e) {e.preventDefault();
@@ -50,7 +50,7 @@
   <!-- Page specific code -->
 
       <div id="itineraryResult"></div>
-<script>  
+<script>
 var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
     //console.logs the information about destination.
     function searchForDestination(destination) {
@@ -62,8 +62,8 @@ var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 
 ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
         var data = snapshot.val();
-        console.log(data.photo);
-         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "'></p><div class='activity'> "+ data.activity + "</div></div>")
+        console.log(data.tips);
+         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "'></p><div class='activity'> "+ data.tips + "</div></<span></span>>")
 
 
          ;
