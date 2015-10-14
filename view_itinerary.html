@@ -26,6 +26,8 @@
     <id="resultsdestination"
     <id="info"></div>
 
+<button id='favoriteMe'>Favorite</button>
+
 <style type="text/css">
 #heartsp {
  position: relative;
@@ -112,6 +114,20 @@ html, body {
 
 <script type="text/javascript">
   $(document).ready(function(){
+
+    //   $("#favoriteMe").click(function() {
+    //   console.log( "You clicked favorite!" );
+    //    });
+
+       $("#favoriteMe").click(function() {
+           var place = decodeURIComponent(window.location.search).split('?')[1];
+           console.log(place);
+        //  console.log($(this).attr("#photoinner"));
+       $(place).clone().insertAfter("#myFavorites");
+       });
+
+
+
 	var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 //this changes the URL to whatever you click on
       if(window.location.search) {
@@ -127,11 +143,15 @@ html, body {
               "<img id='photoinner' src = '"+ data.photo +"'/><div>" +
               "<div id='info'>" + data.tips + "</p>" +
               "<div>" +
-                "<div id = 'heartsp'</div>" + "<br><br><br>" +
+                "<div id = 'heartsp'</div>" + "<div id = 'favoriteMe'</div>"+
+                "<br><br><br>" +
               "</div>")
               $('#itineraryResult').append(results_itin)
           });
       }
+
+
+
     $("#home").click(function(){
         console.log("hi");
         window.location.href="index.html"
