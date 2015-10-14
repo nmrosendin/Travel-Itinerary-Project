@@ -20,8 +20,6 @@
         </div>
 </div>
 
-<button id='favoriteMe'>Favorite</button>
-
   <!-- Page specific code -->
 
 <div id="itineraryResult"
@@ -69,24 +67,19 @@
  -o-transform-origin: 100% 100%;
  transform-origin :100% 100%;
 }
-
 #resultsdestination{
     color:gray;
     float: left;
     font-size: 30px;
     padding-left: 5%;
     z-index: 1;
-
 }
-
 #photoinner{
     float:left;
     padding-left: 5%;
     padding-top: 4%;
     max-width: 600px;
 }
-
-
 * {
   font-family: Lato;
   font-weight: lighter;
@@ -97,13 +90,10 @@
 html, body {
   height: 100%;
 }
-
-
 #button_header {
   display: inline-flex;
   float: right;
 }
-
 #submitButton {
   display: inline-block;
   margin: 5px 5px 5px 5px;
@@ -129,11 +119,9 @@ html, body {
           var place = decodeURIComponent(window.location.search).split('?')[1];
           searchForDestination(place);
       }
-
       function searchForDestination(destination) {
           ref.orderByChild("destination").equalTo(destination).limitToLast(1).on("child_added", function(snapshot) {
               var data = snapshot.val();
-
               var results_itin = (
               "<div id='resultsdestination'>" + "Search Results for " + data.destination + "</div>" +
               "<img id='photoinner' src = '"+ data.photo +"'/><div>" +
@@ -141,21 +129,17 @@ html, body {
               "<div>" +
                 "<div id = 'heartsp'</div>" + "<br><br><br>" +
               "</div>")
-
               $('#itineraryResult').append(results_itin)
           });
       }
-
     $("#home").click(function(){
         console.log("hi");
         window.location.href="index.html"
     });
-
     $("#submitButton").click(function(){
         console.log("hi");
         window.location.href="travel_submit_itinerary.html"
     });
-
     $("#myProfile").click(function(){
         console.log("hi");
         window.location.href="profile.html"
