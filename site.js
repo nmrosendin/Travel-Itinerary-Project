@@ -139,4 +139,25 @@ $(document).ready(function(){
         $('#myProfile').hide();
         $('#home').hide();
     });
+
+    var button = document.getElementsByClassName("buttonhead");
+    
+    for (var i=0; i<button.length; i++) { 
+
+      (function (showbutton) {
+        button[i].addEventListener("mouseover", function(e) {e.preventDefault();
+          button[showbutton].style.color = "white";
+          button[showbutton].style.backgroundColor = "#34b3a0";
+          button[showbutton].style.height = '34px';
+        }, 'false');
+        button[i].addEventListener("mouseout", function(e) {e.preventDefault();
+          button[showbutton].style.backgroundColor = "white";
+          button[showbutton].style.color = "#34b3a0";
+          button[showbutton].style.height = '34px';
+
+        }, 'false');
+        // button[i].addEventListener("click", function(e) {e.preventDefault();
+        //   alert ("Under construction...")}, 'false');
+    }) (i);
+    }
 });

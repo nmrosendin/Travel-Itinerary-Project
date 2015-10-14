@@ -62,8 +62,8 @@ var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
         var data = snapshot.val();
         console.log(data.transportation);
-         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "'<class='dates'> "+ data.depart + "></p><span class='activity'> "+ data.tips + "</div></<span></span>>")
-          $('.caption').append('<input type="image" class="hotelbutton" src="images/hotel.png" class="btTxt submit" />')
+         $('#imagegrid').append("<div class='card'><div class='caption'</div>" + data.destination + " </div><img src='" + data.photo + "'<class='dates'> "+ data.depart + "<div class='activity'</div> "+ data.tips + "</div>")
+          $('.caption').append('<input type="image" class="hotelbutton" src="images/hotel.png" class="btTxt submit"/>')
 //cant figure out why there are multiple icons
          ;
 

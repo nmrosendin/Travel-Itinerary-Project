@@ -47,7 +47,7 @@
 				<!-- <button id="seeAll">See all</button> -->
 				<div class='seeAllButton'>
 					<div id="seeAllButtonDiv">
-						<button id="see_All" href="viewall.html">See all</button>
+						<button id="see_All" class='buttonhead' href="viewall.html">See all</button>
 					</div>
 				</div>
 				<div id="owl-demo" class="owl-carousel" style="height:auto;">
@@ -82,30 +82,6 @@
  </body>
 
 
-<!--   Script for button hovers -->
-<script>
-	$("#search_location").keyup(function(event){
-    if(event.keyCode == 13){
-        $("#search_submit").click();
-    }
-	});
-
-     var button = document.getElementsByClassName("buttonhead");
-
-    for (var i=0; i<button.length; i++) {
-      (function (showbutton) {
-       button[i].addEventListener("mouseover", function(e) {e.preventDefault();
-          button[showbutton].style.backgroundColor = "white";
-
-        }, 'false');
-        button[i].addEventListener("mouseout", function(e) {e.preventDefault();
-          button[showbutton].style.backgroundColor = "white";
-
-
-        }, 'false');
-    }) (i);
-    }
- </script>
 
 <!-- Footer  -->
 <footer class="site-footer">
