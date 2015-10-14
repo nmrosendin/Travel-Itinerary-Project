@@ -91,10 +91,11 @@ $(document).ready(function(){
         $("#FB").hide();
         $('#home').show();
         $('#myProfile').show();
+        $('#homeprofile_div').show();
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
          console.log('my profile pic1');
-        $("#profilecontainer").append('<div id="name_div"><img id="myName" src="' + imageUrl + '"/></div>');
+        $("#profilecontainer").append('<div id="homeprofile_div"><img id="myPic" src="' + imageUrl + '"/></div>');
         console.log('my name');
     }
 

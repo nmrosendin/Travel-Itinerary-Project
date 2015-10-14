@@ -19,6 +19,10 @@ html, body {
 }
 
 /*  page-specific css*/
+#profilecontainer {
+	height: 150px;
+	width: auto;
+}
 
 #homepic {
 	background-image: url("homepage.png");
