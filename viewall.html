@@ -64,9 +64,9 @@ ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapsho
         var data = snapshot.val();
         console.log(data.transportation);
          $('#imagegrid').append("<div class='card'><div class='caption'</div>" + data.destination + " </div><img src='" + data.photo + "'<class='dates'> "+ data.depart + "<div class='activity'</div> "+ data.tips + "</div>")
-          $('.caption').append('<input type="image" class="hotelbutton" src="images/hotel.png" class="btTxt submit"/>')
+        //   $('.caption').append('<input type="image" class="hotelbutton" src="images/hotel.png" class="btTxt submit"/>')
 //cant figure out why there are multiple icons
-         
+
 
             // <div class="item"></></div>
     //     $('#owl-demo').append('<a class="item" href="./view_itinerary.html?' + data.destination +  '"><img src="' + data.photo + '"/><td class=inner>Destination: ' + data.destination + '<br> Date: '+ data.depart +'</td></a>');
@@ -107,7 +107,7 @@ ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapsho
 
   var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 
-  
+
 
       if(window.location.search) {
           console.log(window.location.search);
