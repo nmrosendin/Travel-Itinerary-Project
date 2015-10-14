@@ -25,7 +25,6 @@
       </div>
 </div>
 
-
 <script>
 
      var button = document.getElementsByClassName("buttonhead");
@@ -76,21 +75,32 @@ ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapsho
 //   $('#images').append("<img src=" + image_url + ">");
 // });
 
+// function myFunction() {
+//     window.open("http://www.wsj.com");
+//     window.open("http://www.nyt.com");
+// }
+
+</script>
+
   </script>
   </div>
 <div id="imagegrid">
   </div>
 
-<script type="text/javascript">
-  $(document).ready(function(){
-//hotel button action
+// <script type="text/javascript">
+//   $(document).ready(function(){
+// //hotel button action
 
-$(".hotelbutton").click(function(){
-    console.log(data.transportation)
-    window.location.href="data.transportation"
-});
+// $(".hotelbutton").click(function(){
+//   // window.open("http://www.wsj.com")
+//     console.log("hello")
+//     window.location.href=('www.wsj.com');
+// });
+
 
   var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
+
+  
 
       if(window.location.search) {
           console.log(window.location.search);
