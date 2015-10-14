@@ -26,9 +26,6 @@
 </div>
 
  
-
-
-
 <script>
   
      var button = document.getElementsByClassName("buttonhead");
@@ -66,7 +63,7 @@ var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
         var data = snapshot.val();
         console.log(data.photo);
-         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "''></p><div class='activity'> "+ data.activity + "</div></div>")
+         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "'></p><div class='activity'> "+ data.activity + "</div></div>")
 
 
          ;
