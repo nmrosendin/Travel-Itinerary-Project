@@ -104,7 +104,7 @@ $(document).ready(function(){
         $("#logout").hide();
         $("#FB").show();
         $('#myProfile').hide();
-        $('#home').hide();
+        $('#home').show();
         $('#submitButton').show();
 
     } else {

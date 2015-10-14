@@ -7,7 +7,7 @@ The "dates" class isn't picking up styling.  It was originally date
 and I changed it to dates to match the html but it still isn't working.
 */
 
-<style>
+
 
 * {
   font-family: Lato;
@@ -52,42 +52,52 @@ and I changed it to dates to match the html but it still isn't working.
 }
 /*image grid css*/
 #imagegrid {
-  margin: 50px;
+  width: 100%;
+  margin-right: 50%;
+  margin-left: auto;
+}
+
+#all {
+  text-align: center;
+  font-size: 40px;
+  color: #85D1C6;
+  margin: 50px 0px 30px 0px;
 }
 
 .card {
-  border: 4px solid grey;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  border: 1px solid lightgrey;
+  margin: 10px 10px 10px 40px;
+  max-width: 424px;
   width: 100%;
-  height: 316px;
+  height: auto;
+  display: inline-block;
 }
 
 .card img {
   float: left;
-  max-width: 300px;
-  max-height: 400px;
-  padding: 20px;
+  width: 50%;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+  border-radius: 22px;
 }
 
 .caption {
    max-width: 424px;
-   font-size: 40px;
-   float: right;
-   margin-top: -7px;
-   margin-right: 150px;
-   padding: -7px;
-   padding-top: 15px;
-   padding-left: 60px;
-   color: grey;
+    font-size: 40px;
+    margin-top: -7px;
+    margin-right: 150px;
+    padding: -7px;
+    padding-top: 15px;
+    color: grey;
+    text-align: center;
 }
 
 .activity {
-    max-width: 424px;
-    padding: 30px;
+    width: auto;
+    height: 50%;
+    padding: 10px 10px 10px 10px;
     float: right;
-   /* padding: -9px;*/
-   /* border: 2px solid black;*/
+    padding: 10px 10px 10px 10px;
     font-size: 16px;
     color: grey;
     word-wrap: break-word;  /*// I thnk this makes text that's too long not show up, like the test....*/
@@ -95,9 +105,10 @@ and I changed it to dates to match the html but it still isn't working.
 
 .dates {
     /*border:2px solid red;*/
-    font-size: 20px;
+    font-size: 12px;
     color: grey;
     float: right;
+    font-family: Lato;
 }
 
 
@@ -140,4 +151,4 @@ footer*/
   bottom:0;
 }
 
-</style>
+
