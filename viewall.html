@@ -62,10 +62,10 @@ var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 
 ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapshot) {
         var data = snapshot.val();
-        console.log(data.tips);
-         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "'<span class='dates'>"+ data.depart + "></p><span class='activity'> "+ data.tips + "</div></<span></span>>")
-
-
+        console.log(data.transportation);
+         $('#imagegrid').append("<div class='card'><p><span class='caption'>" + data.destination + " </span><img src='" + data.photo + "'<class='dates'> "+ data.depart + "></p><span class='activity'> "+ data.tips + "</div></<span></span>>")
+          $('.caption').append('<input type="image" class="hotelbutton" src="images/hotel.png" class="btTxt submit" />')
+//cant figure out why there are multiple icons
          ;
 
             // <div class="item"></></div>
@@ -83,6 +83,13 @@ ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapsho
 
 <script type="text/javascript">
   $(document).ready(function(){
+//hotel button action
+
+$(".hotelbutton").click(function(){
+    console.log("hello")
+    window.location.href=data.transportation
+});
+
   var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
 
       if(window.location.search) {
