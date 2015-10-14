@@ -95,7 +95,7 @@ $(document).ready(function(){
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
          console.log('my profile pic1');
-        $("#profilecontainer1").append('<div id="homeprofile_div"><a href='/profile.html?'><img id="myPic" src="' + imageUrl + '"/></div>');
+        $("#profilecontainer1").append('<div id="homeprofile_div"><a href='profile.html?'><img id="myPic" src="' + imageUrl + '"/></div>');
         console.log('my name');
     }
 
