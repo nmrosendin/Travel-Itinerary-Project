@@ -1,6 +1,10 @@
 <style>
 
 /*Heading */
+.page-wrap {
+  margin-bottom: 20px;
+}
+
 .homeHeader {
   display: inline-block;
   width: 100%;
@@ -29,11 +33,31 @@
   color: grey;
 }
 
+/*image grid css*/
+#imagegrid {
+  margin: 50px;
+}
+
 .card {
-  
+  border-style: solid;
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+
+.card img {
+  float: left;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.caption {
+  float: right;
+  margin: 20px;
+  border-style: solid;
 }
 
 
+/*end image grid css*/
 /*
 
 footer*/
