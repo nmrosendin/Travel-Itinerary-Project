@@ -10,9 +10,9 @@
 
 <!-- </head> -->
 
-<!-- 
+<!--
 <body> -->
-  <div class="all">  
+  <div class="all">
     <div class='homeHeader'>
       <div id="button_header">
         <button id='submitButton' div class ="buttonhead">Submit an Itinerary</button>
@@ -28,10 +28,10 @@
 
 <!-- Script for header button hoover -->
  <script>
-  
+
      var button = document.getElementsByClassName("buttonhead");
-    
-    for (var i=0; i<button.length; i++) { 
+
+    for (var i=0; i<button.length; i++) {
 
       (function (showbutton) {
         button[i].addEventListener("mouseover", function(e) {e.preventDefault();
@@ -96,7 +96,7 @@
          <option value="Average">Average</option>
          <option value="Avoid">Avoid</option>
         </select>
-      <input id='sendButton' type="submit" value="Send">
+      <input id='sendButton' type="submit" value="Favorite">
       <input type="hidden" name="_next" value="//site.io/thanks.html">
     </form>
   </div>
@@ -154,14 +154,14 @@ function submitButton(formObj){
 
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
- 
+
 // The latitude and longitude of city
 var position = [51.523180, -0.107133];
- 
+
 function showGoogleMaps() {
- 
+
     var latLng = new google.maps.LatLng(position[0], position[1]);
- 
+
     var mapOptions = {
         zoom: 16, // initialize zoom level - the max value is 21
         streetViewControl: false, // hide the yellow Street View pegman
@@ -169,10 +169,10 @@ function showGoogleMaps() {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: latLng
     };
- 
+
     map = new google.maps.Map(document.getElementById('googlemaps'),
         mapOptions);
- 
+
     // Show the default red marker at the location
     marker = new google.maps.Marker({
         position: latLng,
@@ -181,7 +181,7 @@ function showGoogleMaps() {
         animation: google.maps.Animation.DROP
     });
 }
- 
+
 google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 </script>
  -->
@@ -210,4 +210,3 @@ google.maps.event.addDomListener(window, 'load', showGoogleMaps);
  </div>
 
 </html>
-

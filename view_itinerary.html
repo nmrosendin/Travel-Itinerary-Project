@@ -26,8 +26,7 @@
     <id="resultsdestination"
     <id="info"></div>
 
-<button id='favoriteMe'>Favorite</button>
-
+<button id='favoriteMe' div class ="button">favorite</button>
 <style type="text/css">
 #heartsp {
  position: relative;
@@ -122,10 +121,23 @@ html, body {
        $("#favoriteMe").click(function() {
            var place = decodeURIComponent(window.location.search).split('?')[1];
            console.log(place);
+           alert(place + ' has been added to your favorites list')
         //  console.log($(this).attr("#photoinner"));
-       $(place).clone().insertAfter("#myFavorites");
+        $( place ).append( $( "#myFavorites" ) );
+    //    $(place).clone().insertAfter("#myFavorites");
        });
 
+       var myFirebaseRef = new Firebase ("https://demiskipper440.firebaseio.com");
+       function favoriteMe(formObj){
+           console.log(formObj.place)
+               myFirebaseRef.push({
+                 favoriteMe: formObj.place,
+               }, function(error){
+                   if(error) return alert(error);
+                   alert("Your itinerary has been submitted");
+               });
+               return false;
+       }
 
 
 	var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
