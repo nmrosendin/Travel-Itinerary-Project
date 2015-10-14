@@ -1,5 +1,18 @@
+/*// notes:
+I don't know why the caption div changes sizes.  
+You can see what I'm talking about in inspect element. 
+I want all of the titles to line up. 
+
+The "dates" class isn't picking up styling.  It was originally date 
+and I changed it to dates to match the html but it still isn't working. 
+*/
+
 <style>
 
+* {
+  font-family: Lato;
+  font-weight: lighter;
+}
 /*Heading */
 .page-wrap {
   margin-bottom: 20px;
@@ -39,9 +52,9 @@
 }
 
 .card {
-  border-style: solid;
-  margin-top: 130px;
-  margin-bottom: 130px;
+  border: 4px solid grey;
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 100%;
   height: 316px;
 }
@@ -50,28 +63,37 @@
   float: left;
   max-width: 300px;
   max-height: 400px;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .caption {
-font-size: 40px;
+   max-width: 424px;
+   font-size: 40px;
    float: right;
    margin-top: -7px;
-   margin-right: 14px;
+   margin-right: 150px;
    padding: -7px;
-   padding-left: 71px;
+   padding-top: 15px;
+   padding-left: 60px;
+   color: grey;
 }
 
 .activity {
     max-width: 424px;
-    padding-top: 32px;
+    padding: 30px;
     float: right;
-    padding: -9px;
-    border: 2px solid black;
+   /* padding: -9px;*/
+   /* border: 2px solid black;*/
+    font-size: 16px;
+    color: grey;
+    word-wrap: break-word;  /*// I thnk this makes text that's too long not show up, like the test....*/
 }
 
-.date{
-    border:2px solid red;
+.dates {
+    /*border:2px solid red;*/
+    font-size: 20px;
+    color: grey;
+    float: right;
 }
 
 
