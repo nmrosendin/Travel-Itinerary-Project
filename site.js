@@ -64,7 +64,7 @@ $(document).ready(function(){
      function searchForDestination(destination) {
          ref.orderByChild("destination").equalTo(destination).on("child_added", function(snapshot) {
              // var data = snapshot.val();
-             document.location.href = './viewall.html?' + destination;
+             document.location.href = './view_itinerary.html?' + destination;
          });
      }
      //on submit, takes the value inside the search and uses it to get values
@@ -141,8 +141,8 @@ $(document).ready(function(){
     });
 
     var button = document.getElementsByClassName("buttonhead");
-    
-    for (var i=0; i<button.length; i++) { 
+
+    for (var i=0; i<button.length; i++) {
 
       (function (showbutton) {
         button[i].addEventListener("mouseover", function(e) {e.preventDefault();
