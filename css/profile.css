@@ -78,7 +78,8 @@ h1 {
 
 
 #avatarname {
-	width: 150px;
+	width: 80px;
+	height: auto;
     display: inline-block;
     margin-top: 134px;
 
@@ -93,10 +94,6 @@ h1 {
     margin-right: auto
 }
 
-#profile_div {
-	height: 80px;
-	width: auto;
-}
 
 #username {
     text-align: center;

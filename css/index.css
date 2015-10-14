@@ -20,8 +20,12 @@ html, body {
 
 /*  page-specific css*/
 #myPic {
-	height: 150px;
-	width: auto;
+	width: 50px;
+    height: auto;
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
 }
 
 #homepic {
@@ -95,7 +99,7 @@ h1 {
 
 #submitButton, #search_location, #see_All, #myProfile, #home, #FB, #logout {
 	display: inline-block;
-	margin: 5px 5px 5px 5px;
+	margin: 15px 5px 5px 5px;
 	padding: 9px 11px 9px 11px;
 	border-style: solid #34b3a0;
 	border: 1.5px solid #000;
