@@ -161,7 +161,7 @@ thead {
 
 #seeAllButtonDiv {
 	display: inline-flex;
-	margin-right: 46%;
+	margin-right: auto;
 	margin-left: 46%;
 	margin-bottom: 15px;
 }

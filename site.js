@@ -90,6 +90,7 @@ $(document).ready(function(){
         $("#logout").show();
         $("#FB").hide();
         $('#home').show();
+        $('#myProfile').show();
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
         console.log('my profile pic1');
