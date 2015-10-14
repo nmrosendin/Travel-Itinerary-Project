@@ -94,7 +94,7 @@ $(document).ready(function(){
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
          console.log('my profile pic1');
-        $("#profilecontainer").append('<div id="name_div"><img id="myName" src="' + 'name' + '"/></div>');
+        $("#profilecontainer").append('<div id="name_div"><img id="myName" src="' + imageUrl + '"/></div>');
         console.log('my name');
     }
 
@@ -114,7 +114,6 @@ $(document).ready(function(){
       var info = user.uid.split(":")
       var id = info[1];
       loggedin("https://graph.facebook.com/" + id + "/picture");
-      loggedin("https://graph.facebook.com/" + id + "/name");
     }
 
     $("#FB").click(function(){
@@ -127,10 +126,6 @@ $(document).ready(function(){
                 //window.location.reload(true);
                 //on successful login, display user profile picture
                 loggedin(authData.facebook.profileImageURL);
-                loggedin(authData.facebook.'name');
-
-
-
             };
         });
     });
