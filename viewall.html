@@ -86,8 +86,8 @@ ref.orderByChild("timestamp").limitToLast(10).on("child_added", function(snapsho
 //hotel button action
 
 $(".hotelbutton").click(function(){
-    console.log("hello")
-    window.location.href=data.transportation
+    console.log(data.transportation)
+    window.location.href="data.transportation"
 });
 
   var ref = new Firebase("https://amber-heat-5381.firebaseio.com");
