@@ -20,6 +20,8 @@
         </div>
 </div>
 
+<button id='favoriteMe'>Favorite</button>
+
   <!-- Page specific code -->
 
 <div id="itineraryResult"
@@ -136,12 +138,11 @@ html, body {
               "<div id='resultsdestination'>" + "Search Results for " + data.destination + "</div>" +
               "<img id='photoinner' src = '"+ data.photo +"'/><div>" +
               "<div id='info'>" + data.tips + "</p>" +
-              "<div>" +
+              "<div>" + "<div id = 'favoriteme'</div>"
                 "<div id = 'heartsp'</div>" + "<br><br><br>" +
               "</div>")
 
               $('#itineraryResult').append(results_itin)
-              $('#itineraryResults').append(<button id='favoriteMe'>Favorite</button>)
           });
       }
 
