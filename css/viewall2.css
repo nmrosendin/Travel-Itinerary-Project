@@ -68,6 +68,7 @@ and I changed it to dates to match the html but it still isn't working.
   border: 1px solid lightgrey;
   margin: 10px 10px 10px 40px;
   max-width: 424px;
+  min-height: 390px;
   width: 100%;
   height: auto;
   display: inline-block;
@@ -150,5 +151,3 @@ footer*/
   font-weight: 200;
   bottom:0;
 }
-
-
