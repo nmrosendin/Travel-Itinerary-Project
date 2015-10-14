@@ -48,8 +48,8 @@
 
 .card img {
   float: left;
-  max-width: 500px;
-  max-height: 280px;
+  max-width: 300px;
+  max-height: 400px;
   padding-left: 20px;
 }
 
@@ -68,6 +68,10 @@ font-size: 40px;
     float: right;
     padding: -9px;
     border: 2px solid black;
+}
+
+.date{
+    border:2px solid red;
 }
 
 
