@@ -93,7 +93,9 @@ $(document).ready(function(){
         $('#myProfile').show();
         console.log('testpic');
         $("#profilecontainer").append('<div id="profile_div"><img id="kittens" src="' + imageUrl + '"/></div>');
-        console.log('my profile pic1');
+         console.log('my profile pic1');
+        $("#profilecontainer").append('<div id="name_div"><img id="myName" src="' + 'name' + '"/></div>');
+        console.log('my name');
     }
 
     var ref = new Firebase("https://amber-heat-5381.firebaseio.com/");
@@ -112,6 +114,7 @@ $(document).ready(function(){
       var info = user.uid.split(":")
       var id = info[1];
       loggedin("https://graph.facebook.com/" + id + "/picture");
+      loggedin("https://graph.facebook.com/" + id + "/name");
     }
 
     $("#FB").click(function(){
@@ -124,6 +127,7 @@ $(document).ready(function(){
                 //window.location.reload(true);
                 //on successful login, display user profile picture
                 loggedin(authData.facebook.profileImageURL);
+                loggedin(authData.facebook.'name');
 
 
 

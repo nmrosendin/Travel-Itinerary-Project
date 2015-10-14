@@ -71,6 +71,7 @@ html, body {
 #hometitle {
 	display: inline-block;
 	width: 100%;
+	font-weight: 400;
 }
 
 h1 {
